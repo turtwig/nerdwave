@@ -80,7 +80,7 @@ module.exports = {
     Router: true,
     RWAudio: true,
     RWEvent: true,
-    RWTemplates: true,
+    NWTemplates: true,
     Scrollbar: true,
     SearchList: true,
     SearchPanel: true,

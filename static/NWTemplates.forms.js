@@ -10,22 +10,22 @@
 
 	var bootstrap = true;
 
-	var RWTemplateHelpers = window.RWTemplateHelpers;
+	var NWTemplateHelpers = window.NWTemplateHelpers;
 	var RWTemplateObject = window.RWTemplateObject;
 
 	var autosave_timeouts = {};
 
-	RWTemplateHelpers.opacity = function(val, elem) {
+	NWTemplateHelpers.opacity = function(val, elem) {
 		if (val) elem.style.opacity = "1.0";
 		else elem.style.opacity = "0.6";
 	};
-	RWTemplateHelpers.opacity_get = false;
+	NWTemplateHelpers.opacity_get = false;
 
-	RWTemplateHelpers.className = function(val, elem) {
+	NWTemplateHelpers.className = function(val, elem) {
 		elem.className = val;
 	};
 
-	RWTemplateHelpers.remove_error_class = function(element) {
+	NWTemplateHelpers.remove_error_class = function(element) {
 		var elem = element.classList ? element : this;
 		if (!elem.classList) return;
 		if (elem.classList.contains(errorClass)) {
@@ -41,11 +41,11 @@
 			}
 		}
 	};
-	RWTemplateHelpers._rec = function(elem) {
-		elem.addEventListener("focus", RWTemplateHelpers.remove_error_class);
+	NWTemplateHelpers._rec = function(elem) {
+		elem.addEventListener("focus", NWTemplateHelpers.remove_error_class);
 	};
 
-	RWTemplateHelpers.add_error_class = function(element) {
+	NWTemplateHelpers.add_error_class = function(element) {
 		var elem = elem.classList ? element : this;
 		if (!elem.classList) return;
 		if (elem.classList.contains(errorClass)) {
@@ -62,7 +62,7 @@
 		}
 	};
 
-	RWTemplateHelpers.change_button_class = function(btn, newClass) {
+	NWTemplateHelpers.change_button_class = function(btn, newClass) {
 		btn.classList.remove(btnSuccess);
 		btn.classList.remove(btnError);
 		btn.classList.remove(btnNormal);
@@ -72,7 +72,7 @@
 		btn.classList.add(newClass);
 	};
 
-	RWTemplateHelpers.change_button_text = function(btn, text) {
+	NWTemplateHelpers.change_button_text = function(btn, text) {
 		if (btn._no_changes_please) return;
 		if (!btn._changed) {
 			btn._changed = true;
@@ -86,7 +86,7 @@
 		}
 	};
 
-	RWTemplateHelpers.stop_ie8_propagation = function(e) {
+	NWTemplateHelpers.stop_ie8_propagation = function(e) {
 		e = e || window.event;
 		e.cancelBubble = true;
 		e.returnValue = false;
@@ -100,7 +100,7 @@
 		e.preventDefault();
 	};
 
-	RWTemplateHelpers.on_form_render = function(_c, form) {
+	NWTemplateHelpers.on_form_render = function(_c, form) {
 		if (!_c.$t) return;
 
 		var track_last_button = function(e) {
@@ -112,7 +112,7 @@
 				clearTimeout(autosave_timeouts[_c.$t]);
 				autosave_timeouts[_c.$t] = null;
 			}
-			e = RWTemplateHelpers.stop_ie8_propagation(e);
+			e = NWTemplateHelpers.stop_ie8_propagation(e);
 			if (_c.$t && _c.$t.on_submit) {
 				_c.$t.on_submit();
 			}
@@ -127,7 +127,7 @@
 			}
 		}
 	};
-	RWTemplateHelpers._ofr = RWTemplateHelpers.on_form_render;
+	NWTemplateHelpers._ofr = NWTemplateHelpers.on_form_render;
 
 	RWTemplateObject.prototype.get = function(update_in_place, only_diff, shallow) {
 		var new_obj = {};
@@ -192,15 +192,15 @@
 					}
 
 					if (typeof new_val !== "undefined" && elem.getAttribute("helper")) {
-						if (typeof RWTemplateHelpers[elem.getAttribute("helper") + "_get"] === "function") {
-							new_val = RWTemplateHelpers[elem.getAttribute("helper") + "_get"](this._c, new_val);
-						} else if (typeof RWTemplateHelpers[elem.getAttribute("helper") + "_get"] === "undefined") {
+						if (typeof NWTemplateHelpers[elem.getAttribute("helper") + "_get"] === "function") {
+							new_val = NWTemplateHelpers[elem.getAttribute("helper") + "_get"](this._c, new_val);
+						} else if (typeof NWTemplateHelpers[elem.getAttribute("helper") + "_get"] === "undefined") {
 							console.warn(
 								"Helper " +
 									elem.getAttribute("helper") +
 									" has a setter but no getter (value " +
 									new_val +
-									").  Define RWTemplateHelpers." +
+									").  Define NWTemplateHelpers." +
 									elem.getAttribute("helper") +
 									"_get."
 							);
@@ -291,13 +291,13 @@
 				elements[i] == this._last_button
 			) {
 				if (submit_message) {
-					RWTemplateHelpers.change_button_text(
+					NWTemplateHelpers.change_button_text(
 						elements[i],
 						submit_message || (typeof gettext == "function" ? gettext("Saving...") : "Saving...")
 					);
 				}
 				if (!no_disable) {
-					RWTemplateHelpers.change_button_class(elements[i], elements[i]._normal_class || btnNormal);
+					NWTemplateHelpers.change_button_class(elements[i], elements[i]._normal_class || btnNormal);
 				}
 			}
 			if (!no_disable) {
@@ -328,7 +328,7 @@
 		var submit_btns = [];
 		var i;
 		for (i = 0; i < elements.length; i++) {
-			if (this._c.hasOwnProperty(i)) RWTemplateHelpers.remove_error_class(elements[i]);
+			if (this._c.hasOwnProperty(i)) NWTemplateHelpers.remove_error_class(elements[i]);
 			if (elements[i].getAttribute("disabled") != "always") {
 				elements[i].disabled = false;
 				elements[i].classList.remove("disabled");
@@ -343,14 +343,14 @@
 
 		if (submit_btns.length) {
 			for (i = 0; i < submit_btns.length; i++) {
-				RWTemplateHelpers.change_button_text(submit_btns[i], error_message);
-				RWTemplateHelpers.change_button_class(submit_btns[i], btnError);
+				NWTemplateHelpers.change_button_text(submit_btns[i], error_message);
+				NWTemplateHelpers.change_button_class(submit_btns[i], btnError);
 			}
 
 			tracking_errors[submit_btns[0]] = function() {
 				for (i = 0; i < submit_btns.length; i++) {
-					RWTemplateHelpers.change_button_text(submit_btns[i]);
-					RWTemplateHelpers.change_button_class(submit_btns[i], btnNormal);
+					NWTemplateHelpers.change_button_text(submit_btns[i]);
+					NWTemplateHelpers.change_button_class(submit_btns[i], btnNormal);
 				}
 
 				for (i = 0; i < elements.length; i++) {
@@ -387,7 +387,7 @@
 					this._c[i].$t.error(rest_error[i], xhr_object, error_message);
 				} else if (this.hasOwnProperty(i)) {
 					for (eli = 0; eli < this[i].length; eli++) {
-						RWTemplateHelpers.add_error_class(this[i][eli]);
+						NWTemplateHelpers.add_error_class(this[i][eli]);
 					}
 				}
 			}
@@ -397,14 +397,14 @@
 	RWTemplateObject.prototype.normal = function(submit_button_text) {
 		var elements = this.get_form_elements();
 		for (var i = 0; i < elements.length; i++) {
-			RWTemplateHelpers.remove_error_class(elements[i]);
+			NWTemplateHelpers.remove_error_class(elements[i]);
 			elements[i].disabled = false;
 			elements[i].classList.remove("disabled");
 			if (elements[i].getAttribute("type") == "submit") {
 				if (typeof this._success_message !== "string" || this._success_message) {
-					RWTemplateHelpers.change_button_text(elements[i], submit_button_text);
+					NWTemplateHelpers.change_button_text(elements[i], submit_button_text);
 				}
-				RWTemplateHelpers.change_button_class(elements[i], elements[i]._normal_class || btnNormal);
+				NWTemplateHelpers.change_button_class(elements[i], elements[i]._normal_class || btnNormal);
 			}
 		}
 		return elements;
@@ -437,9 +437,9 @@
 				elements[i] == this._last_button
 			) {
 				if (success_message) {
-					RWTemplateHelpers.change_button_text(elements[i], success_message);
+					NWTemplateHelpers.change_button_text(elements[i], success_message);
 				}
-				RWTemplateHelpers.change_button_class(elements[i], btnSuccess);
+				NWTemplateHelpers.change_button_class(elements[i], btnSuccess);
 				if (!permanent) {
 					if (this._success_timeout) {
 						clearTimeout(this._success_timeout);

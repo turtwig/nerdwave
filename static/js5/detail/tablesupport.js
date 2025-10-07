@@ -69,7 +69,7 @@ var SongsTableDetailDraw = function (song, details) {
     });
   }
 
-  var template = RWTemplates.detail.song_detail(details, song.$t.row);
+  var template = NWTemplates.detail.song_detail(details, song.$t.row);
   song.$t.details = details.$t.details;
 
   if (template.graph_placement) {

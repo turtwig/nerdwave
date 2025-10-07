@@ -15,7 +15,7 @@ BOOTSTRAP.on_init.push(function DJPanel(root_template) {
 	var panel = document.createElement("div");
 	panel.className = "dj_panel panel";
 	root_template.sizeable_area.insertBefore(panel, root_template.search_container);
-	var t = RWTemplates.dj(null, panel);
+	var t = NWTemplates.dj(null, panel);
 
 	var menu_li = document.createElement("li");
 	menu_li.className = "dj_link";

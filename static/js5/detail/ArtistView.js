@@ -44,7 +44,7 @@ var ArtistView = function (json) {
     }
     json.albums = albums;
   }
-  var template = RWTemplates.detail.artist(
+  var template = NWTemplates.detail.artist(
     { artist: json, albums: json.albums },
     document.createElement("div")
   );

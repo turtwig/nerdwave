@@ -28,7 +28,7 @@ function nerdwaveInit() {
     document.addEventListener("load", nerdwaveInit);
     return;
   }
-  if (nerdwaveInitialized || !window.BOOTSTRAP || !window.ALL_LANG || !window.RWTemplates) {
+  if (nerdwaveInitialized || !window.BOOTSTRAP || !window.ALL_LANG || !window.NWTemplates) {
     return;
   }
 
@@ -163,7 +163,7 @@ function nerdwaveInit() {
   }
   BOOTSTRAP.station_list = Stations;
 
-  template = RWTemplates.index({ stations: Stations });
+  template = NWTemplates.index({ stations: Stations });
 
   API.add_callback("user", function (json) {
     if (json.dj) {

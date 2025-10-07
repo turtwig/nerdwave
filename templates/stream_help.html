@@ -92,12 +92,12 @@
 	To update the form HTML, run this but add extra dashes.  It should be double dashes but HTML
 	comments don't allow those and we don't want to trigger quirks mode.
 
-	python libs/RWTemplates.py --templatedir templates/stream_js --outfile static/stream_templates.js --helpers
+	python libs/NWTemplates.py --templatedir templates/stream_js --outfile static/stream_templates.js --helpers
 -->
 <script src="/static/stream_templates.js"></script>
-<script src="/static/RWTemplates.js"></script>
-<script src="/static/RWTemplates.forms.js"></script>
-<script src="/static/RWTemplates.tabify.js"></script>
+<script src="/static/NWTemplates.js"></script>
+<script src="/static/NWTemplates.forms.js"></script>
+<script src="/static/NWTemplates.tabify.js"></script>
 <script src="/static/stream_utility.js"></script>
 <script src="/static/old-http-api.js"></script>
 <div id="template_zone" style="box-sizing: border-box; padding-right: 10px; float: left; width: 50%; border-right: solid 1px #CE8300; padding-bottom: 2em;"></div>
@@ -267,8 +267,8 @@
 		}
 	};
 
-	RWTemplates.stream_form(core_obj, document.getElementById("template_zone"));
-	RWTemplateHelpers.tabify(core_obj, "preset");
+	NWTemplates.stream_form(core_obj, document.getElementById("template_zone"));
+	NWTemplateHelpers.tabify(core_obj, "preset");
 
 	function preset(set) {
 		core_obj.presets.$t.update({ "preset_layout": set });

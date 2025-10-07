@@ -1,4 +1,4 @@
-RWTemplateHelpers.tabify = function(obj, default_tab) {
+NWTemplateHelpers.tabify = function(obj, default_tab) {
 	"use strict";
 
 	if (!obj.$t) return;

@@ -13,20 +13,20 @@
 
 	window.RWTemplateObject = RWTemplateObject;
 
-	if (typeof RWTemplates === "object") {
-		RWTemplates.set_object(RWTemplateObject);
+	if (typeof NWTemplates === "object") {
+		NWTemplates.set_object(RWTemplateObject);
 	}
 
-	var RWTemplateHelpers;
+	var NWTemplateHelpers;
 
-	if (typeof window.RWTemplateHelpers !== "undefined") {
-		RWTemplateHelpers = window.RWTemplateHelpers;
+	if (typeof window.NWTemplateHelpers !== "undefined") {
+		NWTemplateHelpers = window.NWTemplateHelpers;
 	} else {
-		RWTemplateHelpers = {};
-		window.RWTemplateHelpers = RWTemplateHelpers;
+		NWTemplateHelpers = {};
+		window.NWTemplateHelpers = NWTemplateHelpers;
 	}
 
-	RWTemplateHelpers.copyObject = function(obj) {
+	NWTemplateHelpers.copyObject = function(obj) {
 		var newobj = Object.prototype.toString.call(obj) === "[object Array]" ? [] : {};
 		for (var i in obj) {
 			if (i.charAt(0) === "$" || i.charAt(0) === "_") {
@@ -35,10 +35,10 @@
 				// console.log(i + ": skipping function");
 			} else if (Object.prototype.toString.call(obj[i]) === "[object Object]") {
 				// console.log(i + ": diving into object");
-				newobj[i] = RWTemplateHelpers.copyObject(obj[i]);
+				newobj[i] = NWTemplateHelpers.copyObject(obj[i]);
 			} else if (Object.prototype.toString.call(obj[i]) === "[object Array]") {
 				// console.log(i + ": diving into array");
-				newobj[i] = RWTemplateHelpers.copyObject(obj[i]);
+				newobj[i] = NWTemplateHelpers.copyObject(obj[i]);
 			} else {
 				// console.log(i + ": copying");
 				newobj[i] = obj[i];
@@ -47,7 +47,7 @@
 		return newobj;
 	};
 
-	RWTemplateHelpers.array_render = function(arr, template, el, pcontext) {
+	NWTemplateHelpers.array_render = function(arr, template, el, pcontext) {
 		if (!arr.$t) {
 			arr.$t = new RWTemplateObject(arr);
 		}
@@ -105,7 +105,7 @@
 		}
 	};
 
-	RWTemplateHelpers.array_item_delete = function(el, deleted) {
+	NWTemplateHelpers.array_item_delete = function(el, deleted) {
 		if (deleted.$t && deleted.$t.item_root) {
 			for (var i = 0; i < deleted.$t.item_root.length; i++) {
 				if (deleted.$t.item_root[i].parentNode === el) {
@@ -119,7 +119,7 @@
 		}
 	};
 
-	RWTemplateHelpers.array_update = function(arr, fullrender) {
+	NWTemplateHelpers.array_update = function(arr, fullrender) {
 		if (!arr._shadows) return;
 
 		var shadow, exists, i, j, s, changed;
@@ -135,7 +135,7 @@
 				exists = arr.indexOf(shadow.arr[i]);
 				if (exists === -1) {
 					changed = true;
-					(shadow.render_delete || arr.render_delete || RWTemplateHelpers.array_item_delete)(
+					(shadow.render_delete || arr.render_delete || NWTemplateHelpers.array_item_delete)(
 						shadow.el,
 						shadow.arr[i]
 					);
@@ -204,7 +204,7 @@
 		}
 	};
 
-	RWTemplateHelpers.elem_update = function(elem, val) {
+	NWTemplateHelpers.elem_update = function(elem, val) {
 		if (typeof val === "undefined") return;
 		if (typeof elem !== "object") return;
 		if (!elem.getAttribute) return;
@@ -213,10 +213,10 @@
 		var tagname = elem.tagName.toLowerCase();
 		if (elem.getAttribute("helper")) {
 			var hname = elem.getAttribute("helper");
-			if (!RWTemplateHelpers[hname]) {
+			if (!NWTemplateHelpers[hname]) {
 				throw "Helper " + hname + " doesn't exist.";
 			}
-			elemval = RWTemplateHelpers[hname](val, elem);
+			elemval = NWTemplateHelpers[hname](val, elem);
 			if (elemval === undefined) return;
 		}
 		if (tagname === "select") {
@@ -251,7 +251,7 @@
 
 	RWTemplateObject.prototype.update = function(fromObject) {
 		if (Object.prototype.toString.call(this._c) === "[object Array]") {
-			return RWTemplateHelpers.array_update(this._c);
+			return NWTemplateHelpers.array_update(this._c);
 		}
 
 		var val, i;
@@ -264,7 +264,7 @@
 			if (typeof val === "undefined") {
 				// do nothing
 			} else if (Object.prototype.toString.call(val) === "[object Array]") {
-				RWTemplateHelpers.array_update(val, true);
+				NWTemplateHelpers.array_update(val, true);
 			} else if (Object.prototype.toString.call(val) === "[object Object]" && val.$t) {
 				if (val.$t instanceof RWTemplateObject) {
 					val.$t.update();
@@ -275,13 +275,13 @@
 				this[i](val);
 			} else if (typeof this[i] === "object") {
 				for (var eli = 0; eli < this[i].length; eli++) {
-					RWTemplateHelpers.elem_update(this[i][eli], val);
+					NWTemplateHelpers.elem_update(this[i][eli], val);
 				}
 			}
 		}
 	};
 
-	RWTemplateHelpers.array_reconcile = function(fresh, existing) {
+	NWTemplateHelpers.array_reconcile = function(fresh, existing) {
 		if (!existing._unique_field && !existing._update_in_order && !existing._exact_match) {
 			// console.warn("Array that we're trying to update does not have a _unique_field property.");
 			// console.warn(existing);
@@ -383,9 +383,9 @@
 		var newObj = newData || (this.get ? this.get() : {});
 		if (Object.prototype.toString.call(this._c) === "[object Array]") {
 			if (newObj) {
-				RWTemplateHelpers.array_reconcile(newObj, this._c);
+				NWTemplateHelpers.array_reconcile(newObj, this._c);
 			}
-			return RWTemplateHelpers.array_update(this._c);
+			return NWTemplateHelpers.array_update(this._c);
 		}
 		for (var i in newObj) {
 			if (!newObj.hasOwnProperty(i)) {
@@ -398,7 +398,7 @@
 					Object.prototype.toString.call(newObj[i]) === "[object Array]")
 			) {
 				if (Object.prototype.toString.call(this._c[i]) === Object.prototype.toString.call(newObj[i])) {
-					RWTemplateHelpers.array_reconcile(newObj[i], this._c[i]);
+					NWTemplateHelpers.array_reconcile(newObj[i], this._c[i]);
 				} else {
 					console.warn("Mismatching object and error when updating object (new, old, key):");
 					console.warn(newObj, this._c, i);

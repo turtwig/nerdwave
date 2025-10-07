@@ -12,7 +12,7 @@ var RWEvent = function (self) {
   for (var i = 0; i < self.songs.length; i++) {
     self.songs[i]._is_timeline = true;
   }
-  RWTemplates.timeline.event(self);
+  NWTemplates.timeline.event(self);
   self.el = self.$t.el;
   self.history = false;
   for (i = 0; i < self.songs.length; i++) {

@@ -87,7 +87,7 @@ var SearchPanel = (function () {
 
     input_container.classList.add("active");
     input.addEventListener("input", search_reset_color);
-    RWTemplates.search_results(json, el);
+    NWTemplates.search_results(json, el);
     var div, a, i;
 
     for (i = 0; i < json.artists.length; i++) {

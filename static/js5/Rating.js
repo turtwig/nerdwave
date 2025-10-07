@@ -291,7 +291,7 @@ var Rating = (function () {
       touching_song.$t.rating.offsetLeft + rating_width - slider_width - 10;
     var zero_y = last_touch.touches[0].pageY;
     touching_song.$t.rating.classList.remove("starting_touch");
-    var t = RWTemplates.rating_mobile();
+    var t = NWTemplates.rating_mobile();
     var cancelling = false;
     var now_number = 5;
     var remove = function (e) {

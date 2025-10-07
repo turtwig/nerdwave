@@ -9,7 +9,7 @@ var ListenerView = function (json, el) {
 
   // no need to be terribly accurate here
   json.regdate = new Date(json.regdate * 1000).getYear() + 1900;
-  var template = RWTemplates.detail.listener(
+  var template = NWTemplates.detail.listener(
     json,
     document.createElement("div")
   );

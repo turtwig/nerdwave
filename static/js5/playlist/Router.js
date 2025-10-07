@@ -282,7 +282,7 @@ var Router = (function () {
 
     var t;
     if (!cache[typ][id]) {
-      RWTemplates.oops(null, el);
+      NWTemplates.oops(null, el);
     } else if (cache[typ][id]._root) {
       // console.log(typ + "/" + id + ": Appending existing cache.");
       el.appendChild(cache[typ][id]._root);

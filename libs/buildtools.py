@@ -6,7 +6,7 @@ import sass
 from calmjs.parse import es5
 from calmjs.parse.unparsers.es5 import minify_print
 
-from libs import RWTemplates
+from libs import NWTemplates
 from libs.config import get_build_number
 from libs import config
 
@@ -137,7 +137,7 @@ def bake_templates(
         dest_file,
     )
     if not os.path.exists(dest_file) or always_write:
-        RWTemplates.compile_templates(
+        NWTemplates.compile_templates(
             source_dir,
             dest_file,
             helpers=False,

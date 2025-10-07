@@ -118,7 +118,7 @@
 	};
 
 	self.fourohfour = function() {
-		showPage(self.current_route[0], self.current_route[1], RWTemplates.fourohfour().page[0]);
+		showPage(self.current_route[0], self.current_route[1], NWTemplates.fourohfour().page[0]);
 	};
 
 	self.change = function() {

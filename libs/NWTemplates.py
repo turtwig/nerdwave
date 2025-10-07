@@ -25,7 +25,7 @@
 #
 # Templates look much like Handlebars, except handlers are dealt with differently:
 #    Handlebars: <div>{{ format_time time }}</div>
-#    RWTemplate: <div helper="format_time">{{ time }}</div>
+#    NWTemplate: <div helper="format_time">{{ time }}</div>
 #
 # Restrictions:
 #    - {{#each}} cannot handle objects - only arrays.
@@ -48,10 +48,10 @@
 # turn into straight Javascript by adding/remove from raw_js_functions.
 # e.g. for django:
 # before:
-#    RWTemplates.raw_js_functions = []
+#    NWTemplates.raw_js_functions = []
 #    <div>{{ gettext("Hello") }}</div> -----> a.textContent="gettext(\"Hello\")";
 # after:
-#    RWTemplates.raw_js_functions.append("gettext")
+#    NWTemplates.raw_js_functions.append("gettext")
 #    <div>{{ gettext("Hello") }}</div> -----> a.textContent=gettext("Hello");
 #
 ##########################################
@@ -122,11 +122,11 @@ def compile_templates(source_dir, dest_file, **kwargs):
 def js_start(full_calls=False, helpers=False):
     to_ret = ""
     if helpers:
-        to_ret += "window.RWTemplateHelpers={};"
-    to_ret += "window.RWTemplates=function(){"
+        to_ret += "window.NWTemplateHelpers={};"
+    to_ret += "window.NWTemplates=function(){"
     to_ret += "'use strict';"
     to_ret += "var _f={};"
-    to_ret += "var _h=window.RWTemplateHelpers;"
+    to_ret += "var _h=window.NWTemplateHelpers;"
     if not full_calls:
         to_ret += (
             "var _d=document;"
@@ -649,7 +649,7 @@ if __name__ == "__main__":
         description="Nerdwave Javascript Templating system.  Takes Handlebars-style files from templatedir, outputs native Javascript to outfile."
     )
     argp.add_argument("--templatedir", default="jstemplates")
-    argp.add_argument("--outfile", default="RWTemplates.templates.js")
+    argp.add_argument("--outfile", default="NWTemplates.templates.js")
     argp.add_argument("--helpers", action="store_true")
     argp.add_argument("--full", action="store_true")
     command_args = argp.parse_args()
