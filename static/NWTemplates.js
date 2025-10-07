@@ -1,20 +1,20 @@
 (function() {
 	"use strict";
 
-	var RWTemplateObject = function(_c) {
+	var NWTemplateObject = function(_c) {
 		this._c = _c;
-		if (RWTemplateObject.prototype.error) {
-			this.error = RWTemplateObject.prototype.error.bind(this);
+		if (NWTemplateObject.prototype.error) {
+			this.error = NWTemplateObject.prototype.error.bind(this);
 		}
-		if (RWTemplateObject.prototype.success) {
-			this.success = RWTemplateObject.prototype.success.bind(this);
+		if (NWTemplateObject.prototype.success) {
+			this.success = NWTemplateObject.prototype.success.bind(this);
 		}
 	};
 
-	window.RWTemplateObject = RWTemplateObject;
+	window.NWTemplateObject = NWTemplateObject;
 
 	if (typeof NWTemplates === "object") {
-		NWTemplates.set_object(RWTemplateObject);
+		NWTemplates.set_object(NWTemplateObject);
 	}
 
 	var NWTemplateHelpers;
@@ -49,7 +49,7 @@
 
 	NWTemplateHelpers.array_render = function(arr, template, el, pcontext) {
 		if (!arr.$t) {
-			arr.$t = new RWTemplateObject(arr);
+			arr.$t = new NWTemplateObject(arr);
 		}
 
 		var i;
@@ -84,7 +84,7 @@
 				arr.pre_append(arr[i], pcontext);
 			}
 			if (!arr[i].$t) {
-				arr[i].$t = new RWTemplateObject(arr[i]);
+				arr[i].$t = new NWTemplateObject(arr[i]);
 			}
 			if (typeof arr.render_append === "function") {
 				template(arr[i], null, i);
@@ -151,7 +151,7 @@
 						shadow.pre_append(arr[i], shadow.pcontext);
 					}
 					if (!arr[i].$t) {
-						arr[i].$t = new RWTemplateObject(arr[i]);
+						arr[i].$t = new NWTemplateObject(arr[i]);
 					}
 					if (arr._preserve_item_roots && arr[i].$t && arr[i].$t.item_root && arr[i].$t.item_root.length) {
 						shadow.el.appendChild(arr[i].$t.item_root[0]);
@@ -249,7 +249,7 @@
 		}
 	};
 
-	RWTemplateObject.prototype.update = function(fromObject) {
+	NWTemplateObject.prototype.update = function(fromObject) {
 		if (Object.prototype.toString.call(this._c) === "[object Array]") {
 			return NWTemplateHelpers.array_update(this._c);
 		}
@@ -266,10 +266,10 @@
 			} else if (Object.prototype.toString.call(val) === "[object Array]") {
 				NWTemplateHelpers.array_update(val, true);
 			} else if (Object.prototype.toString.call(val) === "[object Object]" && val.$t) {
-				if (val.$t instanceof RWTemplateObject) {
+				if (val.$t instanceof NWTemplateObject) {
 					val.$t.update();
 				} else {
-					throw "$t is not an RWTemplateObject.";
+					throw "$t is not an NWTemplateObject.";
 				}
 			} else if (typeof this[i] === "function") {
 				this[i](val);
@@ -379,7 +379,7 @@
 		}
 	};
 
-	RWTemplateObject.prototype.update_data = function(newData) {
+	NWTemplateObject.prototype.update_data = function(newData) {
 		var newObj = newData || (this.get ? this.get() : {});
 		if (Object.prototype.toString.call(this._c) === "[object Array]") {
 			if (newObj) {

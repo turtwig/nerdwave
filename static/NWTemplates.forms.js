@@ -11,7 +11,7 @@
 	var bootstrap = true;
 
 	var NWTemplateHelpers = window.NWTemplateHelpers;
-	var RWTemplateObject = window.RWTemplateObject;
+	var NWTemplateObject = window.NWTemplateObject;
 
 	var autosave_timeouts = {};
 
@@ -129,7 +129,7 @@
 	};
 	NWTemplateHelpers._ofr = NWTemplateHelpers.on_form_render;
 
-	RWTemplateObject.prototype.get = function(update_in_place, only_diff, shallow) {
+	NWTemplateObject.prototype.get = function(update_in_place, only_diff, shallow) {
 		var new_obj = {};
 		var i, arr_i, ii;
 		for (i in this._c) {
@@ -228,14 +228,14 @@
 		return new_obj;
 	};
 
-	RWTemplateObject.prototype.reset = function() {
+	NWTemplateObject.prototype.reset = function() {
 		this.normal();
-		RWTemplateObject.prototype.update();
+		NWTemplateObject.prototype.update();
 	};
 
 	var allowed_tags = ["select", "button", "textarea", "input"];
 
-	RWTemplateObject.prototype.get_form_elements = function() {
+	NWTemplateObject.prototype.get_form_elements = function() {
 		var elements = [];
 		var i, j;
 		for (i in this) {
@@ -273,14 +273,14 @@
 		return elements;
 	};
 
-	RWTemplateObject.prototype.clear = function() {
+	NWTemplateObject.prototype.clear = function() {
 		var elements = this.normal();
 		for (var i = 0; i < elements.length; i++) {
 			elements[i].value = null;
 		}
 	};
 
-	RWTemplateObject.prototype.submitting = function(submit_message, no_disable) {
+	NWTemplateObject.prototype.submitting = function(submit_message, no_disable) {
 		if (typeof submit_message != "string") {
 			submit_message = typeof gettext == "function" ? gettext("Saving...") : "Saving...";
 		}
@@ -309,7 +309,7 @@
 
 	var tracking_errors = {};
 
-	RWTemplateObject.prototype.error = function(rest_error, xhr_object, error_message) {
+	NWTemplateObject.prototype.error = function(rest_error, xhr_object, error_message) {
 		if (xhr_object) {
 			if (xhr_object.status === 403) {
 				error_message = typeof gettext == "function" ? gettext("Invalid Permissions") : "Invalid Permissions";
@@ -394,7 +394,7 @@
 		}
 	};
 
-	RWTemplateObject.prototype.normal = function(submit_button_text) {
+	NWTemplateObject.prototype.normal = function(submit_button_text) {
 		var elements = this.get_form_elements();
 		for (var i = 0; i < elements.length; i++) {
 			NWTemplateHelpers.remove_error_class(elements[i]);
@@ -410,7 +410,7 @@
 		return elements;
 	};
 
-	RWTemplateObject.prototype.success_display = function(success_message, permanent) {
+	NWTemplateObject.prototype.success_display = function(success_message, permanent) {
 		if (typeof (this._success_message == "string") && !this._success_message) {
 			success_message = null;
 		} else {
@@ -451,7 +451,7 @@
 		}
 	};
 
-	RWTemplateObject.prototype.success = function(json, xhr_object) {
+	NWTemplateObject.prototype.success = function(json, xhr_object) {
 		this.update_data(json);
 		this.update();
 		this.success_display();
@@ -486,7 +486,7 @@
 		});
 	};
 
-	RWTemplateObject.prototype.enable_auto_save = function() {
+	NWTemplateObject.prototype.enable_auto_save = function() {
 		if (!this.on_submit && !this.on_autosave) {
 			throw "$t.on_submit or $t.on_autosave must be defined before calling enable_auto_save.";
 		}
