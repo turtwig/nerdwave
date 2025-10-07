@@ -5,26 +5,26 @@ from libs import db
 from libs import log
 from libs import config
 
-from rainwave.playlist_objects.song import Song
-from rainwave.playlist_objects import cooldown
+from nerdwave.playlist_objects.song import Song
+from nerdwave.playlist_objects import cooldown
 
 # These sorts of single-function imports are to make sure
 # that any non-refactored code works with the way this module used to be.
 # (this module used to be gargantuan)
 # pylint will flag these as unused but TRUST ME, KEEP THEM HERE
 # pylint: disable=W0611
-from rainwave.playlist_objects.album import Album
-from rainwave.playlist_objects.album import warm_cooled_albums
-from rainwave.playlist_objects.album import get_updated_albums_dict
-from rainwave.playlist_objects.artist import Artist
-from rainwave.playlist_objects.songgroup import SongGroup
-from rainwave.playlist_objects.cooldown import prepare_cooldown_algorithm
+from nerdwave.playlist_objects.album import Album
+from nerdwave.playlist_objects.album import warm_cooled_albums
+from nerdwave.playlist_objects.album import get_updated_albums_dict
+from nerdwave.playlist_objects.artist import Artist
+from nerdwave.playlist_objects.songgroup import SongGroup
+from nerdwave.playlist_objects.cooldown import prepare_cooldown_algorithm
 
 # pylint: enable=W0611
 
-from rainwave.playlist_objects.song import num_songs
-from rainwave.playlist_objects.song import num_origin_songs
-from rainwave.playlist_objects.album import num_albums, max_album_ids
+from nerdwave.playlist_objects.song import num_songs
+from nerdwave.playlist_objects.song import num_origin_songs
+from nerdwave.playlist_objects.album import num_albums, max_album_ids
 
 
 class NoAvailableSongsException(Exception):

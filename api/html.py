@@ -35,8 +35,8 @@ def html_write_error(self, status_code, **kwargs):
                     },
                 )
         elif isinstance(exc, APIException):
-            if not isinstance(self.locale, locale.RainwaveLocale):
-                exc.localize(locale.RainwaveLocale.get("en_CA"))
+            if not isinstance(self.locale, locale.NerdwaveLocale):
+                exc.localize(locale.NerdwaveLocale.get("en_CA"))
             else:
                 exc.localize(self.locale)
 

@@ -6,7 +6,7 @@ from libs import config
 from libs import db
 from libs import log
 from libs import cache
-from rainwave.playlist import Album
+from nerdwave.playlist import Album
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

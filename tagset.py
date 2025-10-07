@@ -5,12 +5,12 @@ import math
 import os
 from mutagen.mp3 import EasyMP3
 
-from rainwave.playlist import Song
+from nerdwave.playlist import Song
 from backend.filemonitor import _is_mp3
 from libs import config
 
 parser = argparse.ArgumentParser(
-    description="Read and set tags using Rainwave's ID3 tag code.  You can read or set tags by listing files or directories.  Directory tagging is recursive."
+    description="Read and set tags using Nerdwave's ID3 tag code.  You can read or set tags by listing files or directories.  Directory tagging is recursive."
 )
 parser.add_argument(
     "paths", nargs="+", type=str, help="File(s) or directory(s) to read."

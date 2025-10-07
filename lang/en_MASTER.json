@@ -1,11 +1,11 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
    "__comment__"                 : "Please put them in your actual language. (i.e. use kanji!) Short version should be < 4 characters.",
 
    "language_name"                                   : "English",
    "language_name_short"                             : "EN",
 
-   "__comment__"                 : "This shows up after 'Rainwave' on Google results.  e.g. 'Rainwave Video Game Music Radio: Covers'",
+   "__comment__"                 : "This shows up after 'Nerdwave' on Google results.  e.g. 'Nerdwave Video Game Music Radio: Covers'",
 
    "page_title_on_google"                            : "Video Game Music Radio",
 
@@ -59,7 +59,7 @@
    "no_results"                                      : "No results.",
    "empty_list"                                      : "Empty list.",
    "no_search_results"                               : "No search results.",
-   "server_just_started"                             : "Rainwave is Rebooting",
+   "server_just_started"                             : "Nerdwave is Rebooting",
    "station_paused"                                  : "Station is currently paused by the DJ.",
    "album_on_other_station"                          : "Album is not available on this station, sorry!",
    "song_on_other_station"                           : "Song is not available on %(station).",
@@ -71,17 +71,17 @@
    "search_string_too_short"                         : "Search must be 3 or more letters.",
    "search_result_limit"                             : "(too many results.  please refine your search.)",
 
-   "auth_failed_message": "Authorization with the Rainwave server has failed.  This is most likely a bug, but you can try logging out and logging back in again.  Please contact staff on Discord if you need help.",
+   "auth_failed_message": "Authorization with the Nerdwave server has failed.  This is most likely a bug, but you can try logging out and logging back in again.  Please contact staff on Discord if you need help.",
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Oops",
    "something_went_wrong"                            : "Something went wrong loading that from the server. :(",
-   "crash_happened"                                  : "Rainwave has crashed. :(",
+   "crash_happened"                                  : "Nerdwave has crashed. :(",
    "report_sending"                                  : "Trying to send a report about it...",
    "report_sent"                                     : "Error's been reported!  We'll take a look at it!",
    "report_error"                                    : "... and we couldn't even send a report about it! :(",
-   "please_refresh"                                  : "Refresh the page to bring Rainwave back.",
+   "please_refresh"                                  : "Refresh the page to bring Nerdwave back.",
    "report_submitted"                                : "Report Submitted",
 
    "__comment__"                 : "API Key Management",
@@ -175,7 +175,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Donations",
-   "tip_jar_opener"                                  : "Rainwave will keep running regardless of what's in the tip jar.  If you'd like to toss some gil or meseta our way:",
+   "tip_jar_opener"                                  : "Nerdwave will keep running regardless of what's in the tip jar.  If you'd like to toss some gil or meseta our way:",
    "tip_jar_instruction_1"                           : "Send a PayPal gift using the Paypal.me link below.",
    "tip_jar_instruction_2"                           : "Send us your username and a message as a comment.",
    "tip_jar_instruction_3"                           : "Please indicate if you'd like your name to be kept anonymous.",
@@ -209,11 +209,11 @@
 
    "random_relay"                                    : "Random Relay",
    "redownload_m3u"                                  : "Are you tuning in?  If you just logged in and are using an external app to listen, please redownload the MP3 or Ogg M3U.",
-   "sync_stopped"                                    : "Rainwave has stopped working.  Please refresh and try again.",
-   "lost_connection"                                 : "Lost connection to Rainwave.",
-   "sync_retrying"                                   : "Having trouble talking with Rainwave, please wait...",
+   "sync_stopped"                                    : "Nerdwave has stopped working.  Please refresh and try again.",
+   "lost_connection"                                 : "Lost connection to Nerdwave.",
+   "sync_retrying"                                   : "Having trouble talking with Nerdwave, please wait...",
    "mobile_sync_retrying"                            : "Connection issues, please refresh or try later.",
-   "async_error"                                     : "Error talking to Rainwave.  Please try again or refresh.",
+   "async_error"                                     : "Error talking to Nerdwave.  Please try again or refresh.",
    "deeplink_error"                                  : "Sorry, we couldn't understand the URL you tried to open.",
    "hold_to_rate"                                    : "hold to rate",
 
@@ -372,7 +372,7 @@
 
    "cd_what_is"                                      : "What Is Cooldown?",
    "cd_blue_bkg_is"                                  : "When a song or album has a blue background, it's on cooldown and can't be played right now.",
-   "cd_why_use_cooldown"                             : "Cooldowns are used so Rainwave doesn't repeat songs and albums.",
+   "cd_why_use_cooldown"                             : "Cooldowns are used so Nerdwave doesn't repeat songs and albums.",
    "cd_type_of_cooldown"                             : "Type of Cooldown",
    "cd_example"                                      : "Example",
    "cd_cooldown_length"                              : "Cooldown Length",
@@ -398,7 +398,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Unrated Songs",
    "title"                                           : "Title",

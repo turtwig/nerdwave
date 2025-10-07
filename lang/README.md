@@ -32,14 +32,14 @@ For this walkthrough [github-for-windows](https://windows.github.com/)
 #### From the browser
 
   - Login to your github account.
-  - Click the "Fork" button on [this repository page](https://github.com/rmcauley/rainwave).
+  - Click the "Fork" button on [this repository page](https://github.com/rmcauley/nerdwave).
 
 #### From the github client
 
   - Clone from your forked repository to your local computer for changes.
     - Press the plus sign in the upper left hand corner then, click "Clone" and
-      select "rainwave"
-  - Select a directory that you would like the new "rainwave" folder to appear.
+      select "nerdwave"
+  - Select a directory that you would like the new "nerdwave" folder to appear.
     - I have a directory named "source" in my User directory that I dump all my
       source code in so, I will be using that one.
   - Enter the "lang" directory. This is where all of the translations reside.  
@@ -47,7 +47,7 @@ For this walkthrough [github-for-windows](https://windows.github.com/)
 ### Adding a new translation
 
   - Navigate with your file browser to the location you just chose and enter 
-    the "rainwave" directory.
+    the "nerdwave" directory.
   - The file to be translated is /lang/en_MASTER.json
     - you may take a glimpse of the other files in this directory to see how
       the translations are placed.
@@ -60,7 +60,7 @@ For this walkthrough [github-for-windows](https://windows.github.com/)
 
 ### Getting your translation upstream
 
-[This repository is upstream](https://github.com/rmcauley/rainwave) 
+[This repository is upstream](https://github.com/rmcauley/nerdwave) 
 
 Note: If your copy of the repository has become out of date, the _easiest_ thing to do would 
 be 
@@ -102,7 +102,7 @@ If none of this makes any since and pictures are in order [this](https://help.gi
 # Questions?
 
 - [Message rmcauley on Github](https://github.com/rmcauley)
-- #rainwave at synirc.net ([webclient here](http://widget.mibbit.com/?settings=6c1d29e713c9f8c150d99cd58b4b086b&server=irc.synirc.net&channel=%23rainwave&noServerNotices=true&noServerMotd=true&autoConnect=true))
+- #nerdwave at synirc.net ([webclient here](http://widget.mibbit.com/?settings=6c1d29e713c9f8c150d99cd58b4b086b&server=irc.synirc.net&channel=%23nerdwave&noServerNotices=true&noServerMotd=true&autoConnect=true))
 
 The IRC channel will be VERY useful for when you'll have trouble figuring out
 which messages are used where on the website.  If you don't understand a message,

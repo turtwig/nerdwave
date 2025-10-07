@@ -8,7 +8,7 @@ from libs import buildtools
 from libs import log
 
 locale_explanation = r"""
-Rainwave localizations are stored in a JSON file and use the following syntax:
+Nerdwave localizations are stored in a JSON file and use the following syntax:
 
 "translation_key":  "Translated phrase."
 
@@ -95,7 +95,7 @@ def load_translations():
                     "r",
                     encoding="utf-8",
                 )
-                translations[filename[:-5]] = RainwaveLocale(
+                translations[filename[:-5]] = NerdwaveLocale(
                     filename[:-5], master, json.load(f)
                 )
                 f.close()
@@ -162,7 +162,7 @@ def compile_static_language_files():
 
 # I know this whole thing seems a bit wonkily-coded, but that's because we're staying Tornado compatible,
 # which has an entirely different setup
-class RainwaveLocale(tornado.locale.Locale):
+class NerdwaveLocale(tornado.locale.Locale):
     @classmethod
     def exists(cls, code):
         global translations

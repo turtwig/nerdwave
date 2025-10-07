@@ -1,6 +1,6 @@
-from rainwave.events import election
-from rainwave.events import event
-from rainwave import request
+from nerdwave.events import election
+from nerdwave.events import event
+from nerdwave import request
 
 
 @event.register_producer

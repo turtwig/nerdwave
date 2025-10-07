@@ -13,7 +13,7 @@ class StreamHelp(HTMLRequest):
         self.render(
             "stream_help.html",
             revision_number=config.build_number,
-            title="Rainwave Current Song Widget for Twitch Streamers",
+            title="Nerdwave Current Song Widget for Twitch Streamers",
         )
 
 

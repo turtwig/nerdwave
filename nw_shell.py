@@ -19,13 +19,13 @@ c.InteractiveShellApp.exec_lines = [
     "from libs import db",
     "from libs import cache",
     "from libs import config",
-    "from rainwave.events.election import Election, ElectionProducer",
-    "from rainwave.events.oneup import OneUp, OneUpProducer",
-    "from rainwave.playlist_objects.album import Album",
-    "from rainwave.playlist_objects.artist import Artist",
-    "from rainwave.playlist_objects.song import Song",
-    "from rainwave.playlist_objects.songgroup import SongGroup",
-    "from rainwave.user import User",
+    "from nerdwave.events.election import Election, ElectionProducer",
+    "from nerdwave.events.oneup import OneUp, OneUpProducer",
+    "from nerdwave.playlist_objects.album import Album",
+    "from nerdwave.playlist_objects.artist import Artist",
+    "from nerdwave.playlist_objects.song import Song",
+    "from nerdwave.playlist_objects.songgroup import SongGroup",
+    "from nerdwave.user import User",
 ]
 c.TerminalIPythonApp.display_banner = False
 

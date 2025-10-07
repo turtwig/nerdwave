@@ -23,7 +23,7 @@ def mkdir_p(path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Rainwave Power Hour generation script."
+        description="Nerdwave Power Hour generation script."
     )
     parser.add_argument("--config", default=None)
     args = parser.parse_args()

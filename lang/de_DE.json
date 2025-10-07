@@ -1,11 +1,11 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
    "__comment__"                 : "Please put them in your actual language. (i.e. use kanji!) Short version should be < 4 characters.",
 
    "language_name"                                   : "Deutsch",
    "language_name_short"                             : "DE",
 
-   "__comment__"                 : "This shows up after 'Rainwave' on Google results.  e.g. 'Rainwave Video Game Music Radio: Covers'",
+   "__comment__"                 : "This shows up after 'Nerdwave' on Google results.  e.g. 'Nerdwave Video Game Music Radio: Covers'",
 
    "page_title_on_google"                            : "Videospiel-Musik-Radio",
 
@@ -55,7 +55,7 @@
    "no_results"                                      : "Keine Ergebnisse.",
    "empty_list"                                      : "Leere Liste.",
    "no_search_results"                               : "Keine Suchergebnisse.",
-   "server_just_started"                             : "Rainwave startet gerade neu",
+   "server_just_started"                             : "Nerdwave startet gerade neu",
    "station_paused"                                  : "Station ist aktuell vom DJ pausiert.",
    "album_on_other_station"                          : "Album ist auf dieser Station nicht verfügbar, tut uns leid!",
    "song_on_other_station"                           : "Song ist auf %(station) nicht verfügbar.",
@@ -68,11 +68,11 @@
    "auth_failed_message"                             : "Unser Autorisierungssystem hat nicht funktioniert! Wir hatten dieses Problem in den letzten paar Wochen mit anonymen usern und wir schreiben momentan das Autorisierungssystem neu. Bitte lade die Seite neu oder noch besser, REGISTRIERE DICH UND LOGGE DICH EIN indem du den Forenlink unten verwendest und das Problem wird verschwinden!",
 
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Oops",
    "something_went_wrong"                            : "Irgendetwas lief beim Laden vom Server schief. :(",
-   "crash_happened"                                  : "Rainwave ist abgestürzt. :(",
+   "crash_happened"                                  : "Nerdwave ist abgestürzt. :(",
    "report_sending"                                  : "Versuche einen Fehlerbericht zu senden...",
    "report_sent"                                     : "Der Fehler wurde gemeldet! Wir werden ihn untersuchen!",
    "report_error"                                    : "... und wir konnten nicht einmal einen Fehlerbericht senden :(",
@@ -156,7 +156,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Spendendose",
-   "tip_jar_opener"                                  : "Rainwave wird es weiter geben, egal wie viel Geld in der Spendendose ist. Wenn du aber ein paar Münzen hineinwerfen möchtest, dann ist das ganz einfach:",
+   "tip_jar_opener"                                  : "Nerdwave wird es weiter geben, egal wie viel Geld in der Spendendose ist. Wenn du aber ein paar Münzen hineinwerfen möchtest, dann ist das ganz einfach:",
    "tip_jar_instruction_2"                           : "Schreibe uns deinen Benutzernamen und eine Nachricht als Kommentar.",
    "tip_jar_instruction_3"                           : "Bitte gib uns einen Hinweis, falls du anonym bleiben möchtest.",
    "tip_jar_opener_end"                              : "Nachdem deine Spende bei uns eingegangen und geprüft wurde, erhältst du deinen Spender-Status auf der Seite. Dadurch bekommst du eine längere Wunschliste und kannst für mehr als eine Abstimmung deine Stimme abgeben.",
@@ -189,9 +189,9 @@
 
    "random_relay"                                    : "Zufälliger Relay",
    "redownload_m3u"                                  : "Hörst du den Sender? Wenn du dich gerade erst eingeloggt hast und ein externes Programm verwendest, lade bitte die .mp3.m3u oder .ogg.m3u erneut herunter.",
-   "sync_stopped"                                    : "Rainwave hat aufgehört zu funktionieren. Lade die Seite neu und versuche es noch einmal.",
-   "lost_connection"                                 : "Verbindung zu Rainwave verloren.",
-   "sync_retrying"                                   : "Es gibt Verbindungsprobleme zum Rainwave-Server, bitte warten...",
+   "sync_stopped"                                    : "Nerdwave hat aufgehört zu funktionieren. Lade die Seite neu und versuche es noch einmal.",
+   "lost_connection"                                 : "Verbindung zu Nerdwave verloren.",
+   "sync_retrying"                                   : "Es gibt Verbindungsprobleme zum Nerdwave-Server, bitte warten...",
    "mobile_sync_retrying"                            : "Zeitüberschreitung bei der Verbindung, bitte die Seite neu laden oder später erneut versuchen.",
    "async_error"                                     : "Fehler bei der Datenübertragung. Bitte erneut versuchen oder die Seite neu laden.",
    "deeplink_error"                                  : "Die eingegebene URL konnte nicht verarbeitet werden.",
@@ -296,7 +296,7 @@
    "station_menu_description_id_2"                   : "Alle offiziellen OverClocked ReMix Tracks.",
    "station_menu_description_id_3"                   : "Offizielle und von Fans erstellte Remixes.",
    "station_menu_description_id_4"                   : "Originale und Spielmusik Chiptunes.",
-   "station_menu_description_id_5"                   : "Die komplette Rainwave Wiedergabeliste.",
+   "station_menu_description_id_5"                   : "Die komplette Nerdwave Wiedergabeliste.",
    "now_playing_on_..."                              : "Auf %(station) läuft gerade",
 
    "__comment__"                 : "Preferences",
@@ -349,7 +349,7 @@
 
    "cd_what_is"                                      : "Was bedeutet Abkühlen?",
    "cd_blue_bkg_is"                                  : "Wenn ein Song oder ein Album blau hinterlegt ist, kühlt es gerade ab und kann aktuell nicht gespielt werden.",
-   "cd_why_use_cooldown"                             : "Abkühlpausen werden verwendet, damit Rainwave keine Songs oder Alben wiederholt.",
+   "cd_why_use_cooldown"                             : "Abkühlpausen werden verwendet, damit Nerdwave keine Songs oder Alben wiederholt.",
    "cd_type_of_cooldown"                             : "Art der Abkühlpause",
    "cd_example"                                      : "Beispiel",
    "cd_cooldown_length"                              : "Abkühldauer",
@@ -375,7 +375,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Unbewertete Songs",
    "title"                                           : "Titel",

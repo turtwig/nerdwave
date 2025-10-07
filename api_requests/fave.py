@@ -4,7 +4,7 @@ from api.exceptions import APIException
 from api.urls import handle_api_url
 from libs import db
 
-from rainwave import rating
+from nerdwave import rating
 
 
 @handle_api_url("fave_song")

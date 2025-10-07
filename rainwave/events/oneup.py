@@ -3,8 +3,8 @@ from time import time as timestamp
 
 from libs import db
 from libs import config
-from rainwave import playlist
-from rainwave.events import event
+from nerdwave import playlist
+from nerdwave.events import event
 
 
 @event.register_producer

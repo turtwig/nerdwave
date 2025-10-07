@@ -21,7 +21,7 @@ def prepare_cooldown_algorithm(sid):
     if cooldown_config[sid]["time"] > (timestamp() - 3600):
         return
 
-    # Variable names from here on down are from jf's proposal at: http://rainwave.cc/forums/viewtopic.php?f=13&t=1267
+    # Variable names from here on down are from jf's proposal at: http://nerdwave.cc/forums/viewtopic.php?f=13&t=1267
     sum_aasl = db.c.fetch_var(
         "SELECT SUM(aasl) FROM ("
         "SELECT AVG(song_length) AS aasl "

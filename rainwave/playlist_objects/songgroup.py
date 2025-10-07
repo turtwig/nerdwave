@@ -4,8 +4,8 @@ from libs import db
 from libs import log
 from libs import config
 
-from rainwave.playlist_objects.metadata import AssociatedMetadata
-from rainwave.playlist_objects.metadata import make_searchable_string
+from nerdwave.playlist_objects.metadata import AssociatedMetadata
+from nerdwave.playlist_objects.metadata import make_searchable_string
 
 
 class SongGroup(AssociatedMetadata):

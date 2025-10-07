@@ -10,7 +10,7 @@ from libs import cache
 from libs import config
 
 parser = argparse.ArgumentParser(
-    description="Fetches the next song from a Rainwave backend daemon."
+    description="Fetches the next song from a Nerdwave backend daemon."
 )
 parser.add_argument("--dest", "-d", required=False, default="127.0.0.1")
 parser.add_argument("--sid", "-s", required=False, default=1)

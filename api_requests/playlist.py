@@ -16,8 +16,8 @@ from libs import cache
 from libs import db
 from libs import config
 from libs.pretty_date import pretty_date
-from rainwave import playlist
-from rainwave.playlist_objects.metadata import MetadataNotFoundError
+from nerdwave import playlist
+from nerdwave.playlist_objects.metadata import MetadataNotFoundError
 from api.exceptions import APIException
 
 PAGE_LIMIT = 1000
@@ -317,7 +317,7 @@ class UnratedSongsHTML(PrettyPrintAPIMixin, UnratedSongsHandler):
 
 @handle_api_url("top_100")
 class Top100Songs(APIHandler):
-    description = "Get the 100 highest-rated songs on the entirety of Rainwave, or by station if a station ID is specified in the arguments."
+    description = "Get the 100 highest-rated songs on the entirety of Nerdwave, or by station if a station ID is specified in the arguments."
     return_name = "top_100"
     login_required = False
     sid_required = False

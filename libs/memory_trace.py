@@ -42,7 +42,7 @@ def record_sizes():
 
     try:
         d = os.path.join(
-            tempfile.gettempdir(), "rw_memory_%s_%s.json" % (_prefix, int(timestamp()))
+            tempfile.gettempdir(), "nw_memory_%s_%s.json" % (_prefix, int(timestamp()))
         )
         meliae.scanner.dump_all_objects(d)
     except:

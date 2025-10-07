@@ -227,7 +227,7 @@ def create_tables():
             raise
 
     # From: https://wiki.postgresql.org/wiki/First_%28aggregate%29
-    # Used in rainwave/playlist.py
+    # Used in nerdwave/playlist.py
     first_exists = c.fetch_var("SELECT proname FROM pg_proc WHERE proname = 'first'")
     if not first_exists or first_exists != "first":
         c.update(

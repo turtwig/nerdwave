@@ -1,6 +1,6 @@
 from typing import TypeVar, Type
 from time import time as timestamp
-from rainwave.playlist_objects.song import Song
+from nerdwave.playlist_objects.song import Song
 
 from libs import db
 from libs import log

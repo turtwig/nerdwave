@@ -1,7 +1,7 @@
 from libs import db
 from libs import config
 
-from rainwave.playlist_objects.metadata import (
+from nerdwave.playlist_objects.metadata import (
     AssociatedMetadata,
     MetadataUpdateError,
     make_searchable_string,
@@ -62,7 +62,7 @@ class Artist(AssociatedMetadata):
         )
 
     def _start_cooldown_db(self, sid, cool_time):
-        # Artists don't have cooldowns on Rainwave.
+        # Artists don't have cooldowns on Nerdwave.
         pass
 
     def _start_election_block_db(self, sid, num_elections):

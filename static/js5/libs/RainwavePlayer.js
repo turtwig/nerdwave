@@ -1,6 +1,6 @@
-//  RainwavePlayer - http://github.com/rmcauley/rainwave_player
+//  NerdwavePlayer - http://github.com/rmcauley/nerdwave_player
 
-var RainwavePlayer = (function () {
+var NerdwavePlayer = (function () {
   "use strict";
 
   // callback registries
@@ -15,13 +15,13 @@ var RainwavePlayer = (function () {
     longLoadWarning: [],
   };
 
-  // if the RainwaveAPI interface is not available, we can fallback to round robin relays
+  // if the NerdwaveAPI interface is not available, we can fallback to round robin relays
   var hardcodedStations = {
-    1: ["https://relay.rainwave.cc/game"],
-    2: ["https://relay.rainwave.cc/ocremix"],
-    3: ["https://relay.rainwave.cc/covers"],
-    4: ["https://relay.rainwave.cc/chiptune"],
-    5: ["https://relay.rainwave.cc/all"],
+    1: ["https://relay.nerdwave.cc/game"],
+    2: ["https://relay.nerdwave.cc/ocremix"],
+    3: ["https://relay.nerdwave.cc/covers"],
+    4: ["https://relay.nerdwave.cc/chiptune"],
+    5: ["https://relay.nerdwave.cc/all"],
   };
 
   // these friendly names make it easier to use the library as opposed to remembering numbers
@@ -133,7 +133,7 @@ var RainwavePlayer = (function () {
       audioEl.addEventListener("canplay", function () {
         if (self.debug)
           console.log(
-            "RainwavePlayer: <audio> canplay            :: " +
+            "NerdwavePlayer: <audio> canplay            :: " +
               audioEl.currentSrc
           );
       });
@@ -159,8 +159,8 @@ var RainwavePlayer = (function () {
     if (i === streamURLs.length - 1) {
       source.addEventListener("error", function (e) {
         if (self.debug) {
-          console.log("RainwavePlayer: Error on source " + stream_url);
-          console.log("RainwavePlayer: Error on final source.");
+          console.log("NerdwavePlayer: Error on source " + stream_url);
+          console.log("NerdwavePlayer: Error on final source.");
         }
         onError(e);
       });
@@ -170,7 +170,7 @@ var RainwavePlayer = (function () {
     else {
       source.addEventListener("error", function (e) {
         if (self.debug)
-          console.log("RainwavePlayer: Error on source " + stream_url);
+          console.log("NerdwavePlayer: Error on source " + stream_url);
         onStall(e, i);
       });
     }
@@ -201,8 +201,8 @@ var RainwavePlayer = (function () {
   // *******************************************************************************************
 
   /**
-   * Sets up the library to use a particular Rainwave station.
-   * @param {(number|string)} station - Rainwave Station ID or Rainwave Station Name.
+   * Sets up the library to use a particular Nerdwave station.
+   * @param {(number|string)} station - Nerdwave Station ID or Nerdwave Station Name.
    */
   self.useStation = function (station, streamQuery) {
     if (isNaN(parseInt(station)) || !hardcodedStations[parseInt(station)]) {
@@ -210,7 +210,7 @@ var RainwavePlayer = (function () {
         station = hardcodedStationToSID[station.toLowerCase()];
       } else {
         console.warn(
-          "Unknown Rainwave Station " + station + ", defaulting to All."
+          "Unknown Nerdwave Station " + station + ", defaulting to All."
         );
         station = 5;
       }
@@ -241,7 +241,7 @@ var RainwavePlayer = (function () {
   self.play = function () {
     if (!self.isSupported) {
       console.error(
-        "Rainwave HTML5 Audio Playback is not supported on this browser."
+        "Nerdwave HTML5 Audio Playback is not supported on this browser."
       );
       return;
     }
@@ -352,7 +352,7 @@ var RainwavePlayer = (function () {
   var stopAudioConnectError = function () {
     if (stall_timeout) {
       if (self.debug)
-        console.log("RainwavePlayer: Stutter on " + audioEl.currentSrc);
+        console.log("NerdwavePlayer: Stutter on " + audioEl.currentSrc);
       clearTimeout(stall_timeout);
       stall_timeout = null;
     }
@@ -374,9 +374,9 @@ var RainwavePlayer = (function () {
   var dispatchStall = function (detail) {
     if (self.debug) {
       console.log(
-        "RainwavePlayer: Dispatching stall: " + (detail || "<audio>")
+        "NerdwavePlayer: Dispatching stall: " + (detail || "<audio>")
       );
-      console.log("RainwavePlayer: Stalled on URL " + audioEl.currentSrc);
+      console.log("NerdwavePlayer: Stalled on URL " + audioEl.currentSrc);
     }
     var evt = createEvent("stall");
     evt.detail = detail;
@@ -392,7 +392,7 @@ var RainwavePlayer = (function () {
   var onPlay = function () {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> playing            :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> playing            :: " + audioEl.currentSrc
       );
     stopAudioConnectError();
     self.dispatchEvent(createEvent("playing"));
@@ -401,7 +401,7 @@ var RainwavePlayer = (function () {
   var onWaiting = function () {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> waiting            ::" + audioEl.currentSrc
+        "NerdwavePlayer: <audio> waiting            ::" + audioEl.currentSrc
       );
     stopAudioConnectError();
     self.dispatchEvent(createEvent("loading"));
@@ -410,7 +410,7 @@ var RainwavePlayer = (function () {
   var onEnded = function () {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> ended              :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> ended              :: " + audioEl.currentSrc
       );
     onStop();
     self.play();
@@ -419,7 +419,7 @@ var RainwavePlayer = (function () {
   var onAbort = function () {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> aborted            :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> aborted            :: " + audioEl.currentSrc
       );
     onStop();
   };
@@ -427,7 +427,7 @@ var RainwavePlayer = (function () {
   var onStop = function () {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> stop               :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> stop               :: " + audioEl.currentSrc
       );
     self.stop();
   };
@@ -435,7 +435,7 @@ var RainwavePlayer = (function () {
   var onSuspend = function (e) {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> suspend            :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> suspend            :: " + audioEl.currentSrc
       );
     onStall(e);
   };
@@ -449,21 +449,21 @@ var RainwavePlayer = (function () {
     if (i === undefined) {
       if (self.debug)
         console.log(
-          "RainwavePlayer: <audio> stall              :: " + audioEl.currentSrc
+          "NerdwavePlayer: <audio> stall              :: " + audioEl.currentSrc
         );
       if (chromeSpecialFlag) {
         // we can ignore <audio> element stalls when Chrome is being special
         // because it is forever stalled for some reason. :/
         if (self.debug)
           console.log(
-            "RainwavePlayer: Ignoring stall due to chromeSpecialFlag."
+            "NerdwavePlayer: Ignoring stall due to chromeSpecialFlag."
           );
         return;
       }
     } else {
       if (self.debug)
         console.log(
-          "RainwavePlayer: <source> stall             :: " + audioEl.currentSrc
+          "NerdwavePlayer: <source> stall             :: " + audioEl.currentSrc
         );
     }
 
@@ -472,14 +472,14 @@ var RainwavePlayer = (function () {
       detail = " (" + (i + 1) + "/" + streamURLs.length + ")";
     }
     if (self.debug)
-      console.log("RainwavePlayer: Stall event detail: " + detail);
+      console.log("NerdwavePlayer: Stall event detail: " + detail);
     doAudioConnectError(detail);
   };
 
   var onError = function (e) {
     if (self.debug)
       console.log(
-        "RainwavePlayer: <audio> error              :: " + audioEl.currentSrc
+        "NerdwavePlayer: <audio> error              :: " + audioEl.currentSrc
       );
     stopAudioConnectError();
     self.stop();
@@ -492,11 +492,11 @@ var RainwavePlayer = (function () {
 
   self.dispatchEvent = function (evt) {
     if (!evt) {
-      console.error("RainwavePlayer: No event specified to dispatch.");
+      console.error("NerdwavePlayer: No event specified to dispatch.");
       return;
     }
     if (!callbacks[evt.type]) {
-      console.error("RainwavePlayer: Invalid event type.");
+      console.error("NerdwavePlayer: Invalid event type.");
       return;
     }
     for (var i = 0; i < callbacks[evt.type].length; i++) {
@@ -507,7 +507,7 @@ var RainwavePlayer = (function () {
   self.addEventListener = function (evtname, callback) {
     if (!callbacks[evtname]) {
       console.error(
-        evtname + " is not a supported event for the Rainwave Player."
+        evtname + " is not a supported event for the Nerdwave Player."
       );
       return;
     }

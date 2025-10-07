@@ -7,8 +7,8 @@ import tornado.process
 import tornado.options
 
 from backend import sync_to_front
-from rainwave import schedule
-from rainwave import playlist
+from nerdwave import schedule
+from nerdwave import playlist
 from libs import log
 from libs import config
 from libs import db
@@ -112,7 +112,7 @@ class AdvanceScheduleRequest(tornado.web.RequestHandler):
 class BackendServer:
     def _listen(self, sid):
         log.init(
-            "%s/rw_%s.log"
+            "%s/nw_%s.log"
             % (
                 config.get_directory("log_dir"),
                 config.station_id_friendly[sid].lower(),

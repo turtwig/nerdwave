@@ -42,19 +42,19 @@ def get_and_bump_build_number():
 def get_config_file(testmode=False):
     if os.path.isfile("etc/%s.conf" % getpass.getuser()):
         return "etc/%s.conf" % getpass.getuser()
-    elif testmode and os.path.isfile("etc/rainwave_test.conf"):
-        return "etc/rainwave_test.conf"
-    elif os.path.isfile("etc/rainwave.conf"):
-        return "etc/rainwave.conf"
-    elif os.path.isfile("/etc/rainwave.conf"):
-        return "/etc/rainwave.conf"
+    elif testmode and os.path.isfile("etc/nerdwave_test.conf"):
+        return "etc/nerdwave_test.conf"
+    elif os.path.isfile("etc/nerdwave.conf"):
+        return "etc/nerdwave.conf"
+    elif os.path.isfile("/etc/nerdwave.conf"):
+        return "/etc/nerdwave.conf"
     elif testmode:
         raise RuntimeError(
-            "Could not find a configuration file at etc/rainwave_test.conf."
+            "Could not find a configuration file at etc/nerdwave_test.conf."
         )
     else:
         raise RuntimeError(
-            "Could not find a configuration file at etc/rainwave.conf or /etc/rainwave.conf"
+            "Could not find a configuration file at etc/nerdwave.conf or /etc/nerdwave.conf"
         )
 
 

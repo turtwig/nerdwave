@@ -20,9 +20,9 @@ from libs import cache
 from libs import memory_trace
 from libs import buildtools
 from libs import zeromq
-from rainwave import playlist
-from rainwave import schedule
-import rainwave.request
+from nerdwave import playlist
+from nerdwave import schedule
+import nerdwave.request
 
 from .urls import request_classes
 from .exceptions import APIException
@@ -59,7 +59,7 @@ class APIServer:
         port_no = int(config.get("api_base_port")) + task_id
 
         # Log according to configured directory and port # we're operating on
-        log_file = "%s/rw_api_%s.log" % (config.get_directory("log_dir"), port_no)
+        log_file = "%s/nw_api_%s.log" % (config.get_directory("log_dir"), port_no)
         log.init(log_file, config.get("log_level"))
         log.debug("start", "Server booting, port %s." % port_no)
         db.connect(auto_retry=False, retry_only_this_time=True)
@@ -80,8 +80,8 @@ class APIServer:
             schedule.load()
             for station_id in config.station_ids:
                 schedule.update_memcache(station_id)
-                rainwave.request.update_line(station_id)
-                rainwave.request.update_expire_times()
+                nerdwave.request.update_line(station_id)
+                nerdwave.request.update_expire_times()
                 cache.set_station(station_id, "backend_ok", True)
                 cache.set_station(station_id, "backend_message", "OK")
                 cache.set_station(station_id, "get_next_socket_timeout", False)

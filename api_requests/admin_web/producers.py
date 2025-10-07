@@ -3,7 +3,7 @@ import api.web
 from api import fieldtypes
 from api.urls import handle_url
 from api_requests.admin import producers
-from rainwave.events import event
+from nerdwave.events import event
 from api_requests.admin_web import index
 from api_requests.admin_web.power_hours import get_ph_formatted_time
 
@@ -11,7 +11,7 @@ from api_requests.admin_web.power_hours import get_ph_formatted_time
 # and registered correctly with their parent class
 # it is critical to make sure this module works correctly
 # do not remove, that pylint ignore is there for a good reason
-from rainwave import schedule  # pylint: disable=W0611
+from nerdwave import schedule  # pylint: disable=W0611
 
 
 @handle_url("/admin/tools/producers")

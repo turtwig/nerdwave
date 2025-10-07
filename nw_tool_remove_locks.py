@@ -5,7 +5,7 @@ import argparse
 import libs.config
 import libs.log
 import libs.db
-import rainwave.playlist
+import nerdwave.playlist
 
 parser = argparse.ArgumentParser(description="Removes all election and cooldown data.")
 parser.add_argument("--config", default=None)
@@ -14,4 +14,4 @@ args = parser.parse_args()
 libs.config.load(args.config)
 libs.log.init()
 libs.db.connect()
-rainwave.playlist.remove_all_locks(args.sid)
+nerdwave.playlist.remove_all_locks(args.sid)

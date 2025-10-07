@@ -1,5 +1,5 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
 
    "language_name"                                   : "Suomi",
    "language_name_short"                             : "FI",
@@ -102,7 +102,7 @@
    "__comment__"                 : "Tip Jar",
 
    "tip_jar"                                         : "Tippipurkki",
-   "tip_jar_opener"                                  : "Rainwaven toiminta jatkuu tippipurkin sisällöstä huolimatta.  Jos haluaisit lahjoittaa meille pari lanttia, se on yksinkertaista:",
+   "tip_jar_opener"                                  : "Nerdwaven toiminta jatkuu tippipurkin sisällöstä huolimatta.  Jos haluaisit lahjoittaa meille pari lanttia, se on yksinkertaista:",
    "tip_jar_instruction_2"                           : "Lähetä käyttäjänimesi ja viestisi kommenttina.",
    "tip_jar_instruction_3"                           : "Ole hyvä ja ilmoita haluatko nimesi pidettävän anonyyminä.",
    "tip_jar_opener_end"                              : "Lahjoituksesi käsittelyn jälkeen sinulle annetaan lahjoittaja-status.  Tämä antaa sinulle mahdollisuuden lisätä enemmän toiveita jonoon ja mahdollisuuden äänestää useammassa kuin yhdessä äänestyksessä kerralla.",
@@ -132,9 +132,9 @@
 
    "redownload_m3u"                                  : "Aloitatko kuuntelemisen?  Jos kirjauduit juuri sisään, ole hyvä ja lataa soittolista uudelleen.",
    "random_relay"                                    : "Satunnainen välityspalvelin",
-   "sync_stopped"                                    : "Rainwave on lopettanut toimimasta.  Yritä uudelleen uudelleenlataamalla sivu.",
+   "sync_stopped"                                    : "Nerdwave on lopettanut toimimasta.  Yritä uudelleen uudelleenlataamalla sivu.",
    "lost_connection"                                 : "Yhteys palvelimeen menetettiin.",
-   "sync_retrying"                                   : "Ongelmia yhteydessä Rainwave-palvelimeen, odota hetki...",
+   "sync_retrying"                                   : "Ongelmia yhteydessä Nerdwave-palvelimeen, odota hetki...",
    "mobile_sync_retrying"                            : "Yhteys aikakatkaistu, ole hyvä ja uudelleenlataa sivu tai yritä myöhemmin uudelleen.",
    "async_error"                                     : "Virhe palvelinyhteydessä.  Ole hyvä ja uudelleenlataa sivu tai yritä uudelleen.",
    "deeplink_error"                                  : "Syötettyä osoitetta ei pystytty tunnistamaan.",
@@ -142,11 +142,11 @@
    "invalid_hotkey"                                  : "Epäkelpo pikanäppäin.",
    "not_an_election"                                 : "Ei ole äänestys.",
 
-   "catastrophic_error"                              : "Rainwave on kaatunut :(",
+   "catastrophic_error"                              : "Nerdwave on kaatunut :(",
    "submit_javascript_error"                         : "Ole hyvä ja lähetä alla oleva virheraportti keskustelualueelle, jotta voimme korjata virheen.",
 
    "__comment__"                 : "About Window",
-   "about_window_header"                             : "Tietoa Rainwavestä",
+   "about_window_header"                             : "Tietoa Nerdwavestä",
    "staff_list_header"                               : "Henkilökunta",
    "relay_sponsors_header"                           : "Välityspalvelinten sponsorit",
    "translators_header"                              : "Kääntäjät",
@@ -154,7 +154,7 @@
    "design_by"                                       : "Sivuston ulkoasu",
    "donation_info_label"                             : "Lahjoitustiedot",
    "donation_info_link"                              : "Tiedot",
-   "github_info_label"                               : "Rainwaven avoimen lähdekoodin varasto",
+   "github_info_label"                               : "Nerdwaven avoimen lähdekoodin varasto",
    "github_info_link"                                : "Katso GitHubissa",
 
    "__comment__"                 : "Playlist View",
@@ -214,7 +214,7 @@
    "station_menu_description_id_2"                   : "Kaikki viralliset OverClocked ReMix-kappaleet.",
    "station_menu_description_id_3"                   : "Viralliset ja fanien tekemät remixit.",
    "station_menu_description_id_4"                   : "Alkuperäiset ja pelimusiikki-chiptunet.",
-   "station_menu_description_id_5"                   : "Rainwave-soittolista kokonaisuudessaan.",
+   "station_menu_description_id_5"                   : "Nerdwave-soittolista kokonaisuudessaan.",
    "now_playing_on_..."                              : "Nyt soi asemalla %(station)",
 
    "__comment__"                 : "Preferences",

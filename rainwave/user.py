@@ -10,7 +10,7 @@ from libs import cache
 from libs import db
 from libs import config
 
-from rainwave import playlist
+from nerdwave import playlist
 
 from api.exceptions import APIException
 

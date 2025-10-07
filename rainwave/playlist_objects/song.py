@@ -10,15 +10,15 @@ from time import time as timestamp
 
 from libs import cache, config, db, log, replaygain
 from mutagen.mp3 import MP3
-from rainwave import rating
-from rainwave.playlist_objects import cooldown
-from rainwave.playlist_objects.album import Album
-from rainwave.playlist_objects.artist import Artist
-from rainwave.playlist_objects.metadata import (
+from nerdwave import rating
+from nerdwave.playlist_objects import cooldown
+from nerdwave.playlist_objects.album import Album
+from nerdwave.playlist_objects.artist import Artist
+from nerdwave.playlist_objects.metadata import (
     MetadataUpdateError,
     make_searchable_string,
 )
-from rainwave.playlist_objects.songgroup import SongGroup
+from nerdwave.playlist_objects.songgroup import SongGroup
 
 num_songs = {}
 num_origin_songs = {}

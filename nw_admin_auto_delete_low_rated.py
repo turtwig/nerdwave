@@ -10,7 +10,7 @@ from libs import db
 from libs import cache
 from libs import log
 
-from rainwave.playlist_objects.song import Song
+from nerdwave.playlist_objects.song import Song
 
 
 def mkdir_p(path):
@@ -25,14 +25,14 @@ def mkdir_p(path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Rainwave auto-song cleanup.  WARNING: This script hardcoded for Rainwave's setup!  Please edit the code before using!"
+        description="Nerdwave auto-song cleanup.  WARNING: This script hardcoded for Nerdwave's setup!  Please edit the code before using!"
     )
     parser.add_argument("--config", default=None, required=True)
     parser.add_argument("--moveto", default=None, required=True)
     parser.add_argument("--execute", required=False, action="store_true")
     args = parser.parse_args()
     config.load(args.config)
-    log_file = "%s/rw_auto_clean.log" % (config.get_directory("log_dir"),)
+    log_file = "%s/nw_auto_clean.log" % (config.get_directory("log_dir"),)
     log.init(log_file, "print")
     db.connect()
     cache.connect()

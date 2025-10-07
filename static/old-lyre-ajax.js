@@ -1,4 +1,4 @@
-// Lyre AJAX :: http://rainwave.cc/api/ :: (c) Robert McAuley 2011
+// Lyre AJAX :: http://nerdwave.cc/api/ :: (c) Robert McAuley 2011
 
 var lyre = (function() {
 	var maxid = -1;
@@ -13,10 +13,10 @@ var lyre = (function() {
 	var async_queue = new Array();
 	var callbacks = new Array();
 	var universal_callbacks = new Array();
-	var urlprefix = "https://rainwave.cc/api4/";
+	var urlprefix = "https://nerdwave.cc/api4/";
 
-	var rw_user_id = 1;
-	var rw_apikey = "";
+	var nw_user_id = 1;
+	var nw_apikey = "";
 
 	var that = {};
 
@@ -34,11 +34,11 @@ var lyre = (function() {
 	};
 
 	that.setUserID = function(user_id) {
-		rw_user_id = user_id;
+		nw_user_id = user_id;
 	};
 
 	that.setKey = function(key) {
-		rw_apikey = key;
+		nw_apikey = key;
 	};
 
 	that.clockSync = function(time) {
@@ -99,8 +99,8 @@ var lyre = (function() {
 		sync.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		var fparams = cloneObject(params, that.sync_extra);
 		fparams["sid"] = sid;
-		fparams["user_id"] = rw_user_id;
-		fparams["key"] = rw_apikey;
+		fparams["user_id"] = nw_user_id;
+		fparams["key"] = nw_apikey;
 		fparams["in_order"] = "true";
 		var sfparams = that.serialize(fparams);
 		sync.send(sfparams);
@@ -251,8 +251,8 @@ var lyre = (function() {
 			async.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			var fparams = cloneObject(params);
 			fparams["sid"] = sid;
-			fparams["user_id"] = rw_user_id;
-			fparams["key"] = rw_apikey;
+			fparams["user_id"] = nw_user_id;
+			fparams["key"] = nw_apikey;
 			fparams["in_order"] = "true";
 			async.send(that.serialize(fparams));
 		} else {

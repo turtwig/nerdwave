@@ -5,28 +5,28 @@ import requests
 import tornado.ioloop
 
 from backend import sync_to_front
-from rainwave import events
-from rainwave import playlist
-import rainwave.playlist_objects.album
-from rainwave import listeners
-from rainwave import request
-from rainwave import user
+from nerdwave import events
+from nerdwave import playlist
+import nerdwave.playlist_objects.album
+from nerdwave import listeners
+from nerdwave import request
+from nerdwave import user
 from libs import db
 from libs import config
 from libs import cache
 from libs import log
 
-from rainwave.events import election
+from nerdwave.events import election
 
 # This is to make sure the code gets loaded and producers get registered
-import rainwave.events.oneup
-import rainwave.events.pvpelection
-import rainwave.events.pvpelection_no_cooldown
-import rainwave.events.shortest_election
-import rainwave.events.singlesong
+import nerdwave.events.oneup
+import nerdwave.events.pvpelection
+import nerdwave.events.pvpelection_no_cooldown
+import nerdwave.events.shortest_election
+import nerdwave.events.singlesong
 
-from rainwave.events.singlesong import SingleSong
-from rainwave.events.event import BaseProducer, BaseEvent
+from nerdwave.events.singlesong import SingleSong
+from nerdwave.events.event import BaseProducer, BaseEvent
 
 # Events for each station
 current = {}
@@ -194,7 +194,7 @@ def post_process(sid):
         db.c.start_transaction()
         start_time = timestamp()
         playlist.prepare_cooldown_algorithm(sid)
-        rainwave.playlist_objects.album.clear_updated_albums(sid)
+        nerdwave.playlist_objects.album.clear_updated_albums(sid)
         log.debug("post", "Playlist prepare time: %.6f" % (timestamp() - start_time,))
 
         start_time = timestamp()
@@ -371,7 +371,7 @@ def manage_next(sid):
             )
         if time_to_future_producer < 40:
             target_length = time_to_future_producer
-            next_producer = rainwave.events.shortest_election.ShortestElectionProducer(
+            next_producer = nerdwave.events.shortest_election.ShortestElectionProducer(
                 sid
             )
             log.debug(
@@ -494,7 +494,7 @@ def update_memcache(sid):
     )
     cache.set_station(sid, "current_listeners", listeners.get_listeners_dict(sid), True)
     cache.set_station(sid, "album_diff", playlist.get_updated_albums_dict(sid), True)
-    rainwave.playlist_objects.album.clear_updated_albums(sid)
+    nerdwave.playlist_objects.album.clear_updated_albums(sid)
     cache.set_station(sid, "all_albums", playlist.get_all_albums_list(sid), True)
     cache.set_station(sid, "all_artists", playlist.get_all_artists_list(sid), True)
     cache.set_station(sid, "all_groups", playlist.get_all_groups_list(sid), True)

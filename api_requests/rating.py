@@ -4,8 +4,8 @@ from api.exceptions import APIException
 from api.urls import handle_api_url
 
 from libs import cache
-from rainwave import rating as ratinglib
-from rainwave import playlist
+from nerdwave import rating as ratinglib
+from nerdwave import playlist
 
 
 @handle_api_url("rate")

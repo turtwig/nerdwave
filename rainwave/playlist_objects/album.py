@@ -3,9 +3,9 @@ import os
 from time import time as timestamp
 
 from libs import cache, config, db, log
-from rainwave import rating
-from rainwave.playlist_objects import cooldown
-from rainwave.playlist_objects.metadata import (
+from nerdwave import rating
+from nerdwave.playlist_objects import cooldown
+from nerdwave.playlist_objects.metadata import (
     AssociatedMetadata,
     MetadataNotFoundError,
     make_searchable_string,

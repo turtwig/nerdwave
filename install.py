@@ -9,12 +9,12 @@ from distutils.file_util import copy_file
 
 from libs import config
 
-user = "rainwave"
+user = "nerdwave"
 group = "www-data"
 
 root = path.abspath(os.sep)
-conf_file = path.join(root, "etc", "rainwave.conf")
-install_dir = path.join(root, "opt", "rainwave")
+conf_file = path.join(root, "etc", "nerdwave.conf")
+install_dir = path.join(root, "opt", "nerdwave")
 install_static_baked_dir = path.join(install_dir, "static", "baked")
 
 copy_dirs = [
@@ -24,17 +24,17 @@ copy_dirs = [
     "etc",
     "lang",
     "libs",
-    "rainwave",
+    "nerdwave",
     "static",
     "templates",
 ]
 
-copy_files = list(glob("rw_*.py")) + ["tagset.py", "Pipfile", "Pipfile.lock"]
+copy_files = list(glob("nw_*.py")) + ["tagset.py", "Pipfile", "Pipfile.lock"]
 
 services = [
-    "rainwave-backend",
-    "rainwave-api",
-    "rainwave-scanner",
+    "nerdwave-backend",
+    "nerdwave-api",
+    "nerdwave-scanner",
 ]
 
 if __name__ == "__main__":
@@ -70,11 +70,11 @@ if __name__ == "__main__":
 
     pwd = os.getcwd()
     os.chdir(install_dir)
-    subprocess.call(["sudo", "--user=rainwave", "python3", "-m", "pipenv", "sync"])
+    subprocess.call(["sudo", "--user=nerdwave", "python3", "-m", "pipenv", "sync"])
     subprocess.call(["python3", "-m", "pipenv", "sync"])
     os.chdir(pwd)
 
-    print(f"Rainwave installed to {install_dir}")
+    print(f"Nerdwave installed to {install_dir}")
 
     for service in services:
         subprocess.check_call(["service", service, "restart"])

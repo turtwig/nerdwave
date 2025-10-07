@@ -1,11 +1,11 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
    "__comment__"                 : "Please put them in your actual language. (i.e. use kanji!) Short version should be < 4 characters.",
 
    "language_name"                                   : "Español",
    "language_name_short"                             : "ES-CL",
 
-   "__comment__"                 : "This shows up after 'Rainwave' on Google results.  e.g. 'Rainwave Video Game Music Radio: Covers'",
+   "__comment__"                 : "This shows up after 'Nerdwave' on Google results.  e.g. 'Nerdwave Video Game Music Radio: Covers'",
 
    "page_title_on_google"                            : "Radio de Música de Videojuegos",
 
@@ -56,7 +56,7 @@
    "no_results"                                      : "Sin resultados.",
    "empty_list"                                      : "Lista vacía.",
    "no_search_results"                               : "Búsqueda sin resultados.",
-   "server_just_started"                             : "Rainwave se está Reiniciando",
+   "server_just_started"                             : "Nerdwave se está Reiniciando",
    "station_paused"                                  : "La estación ha sido pausada por el DJ.",
    "album_on_other_station"                          : "Lo sentimos, este álbum no está disponible en esta estación.",
    "album_is_dj_only"                                : "Lo sentimos, este álbum es exclusivo de este evento.",
@@ -67,15 +67,15 @@
    "search_result_limit"                             : "(demasiados resultados. debes ser más específico.)",
    "auth_failed_message"                             : "¡Nuestro sistema de autorización ha fallado! Hemos tenido este error en las últimas semanas con usuarios anónimos, y actualmente estamos reescribiendo el sistema de autenticación. Por favor, actualiza la página, o mejor, REGÍSTRATE Y ACCEDE usando el enlace del foro que se encuentra a continuación para solucionar el problema",
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Ups",
    "something_went_wrong"                            : "Algo salió mal al cargar eso desde el servidor. :(",
-   "crash_happened"                                  : "Rainwave ha fallado. :(",
+   "crash_happened"                                  : "Nerdwave ha fallado. :(",
    "report_sending"                                  : "Tratando de enviar un reporte al respecto...",
    "report_sent"                                     : "¡El error ha sido reportado! ¡Le echaremos un vistazo!",
    "report_error"                                    : "¡...Ni siquiera hemos podido enviar el reporte! :(",
-   "please_refresh"                                  : "Recarga la página para traer a Rainwave de vuelta.",
+   "please_refresh"                                  : "Recarga la página para traer a Nerdwave de vuelta.",
    "report_submitted"                                : "Reporte Enviado",
 
    "__comment__"                 : "API Key Management",
@@ -154,7 +154,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Donaciones",
-   "tip_jar_opener"                                  : "Rainwave seguirá funcionando independientemente de lo que haya en el jarro de propinas.  Si deseas echarle algunos guiles o rupias:",
+   "tip_jar_opener"                                  : "Nerdwave seguirá funcionando independientemente de lo que haya en el jarro de propinas.  Si deseas echarle algunos guiles o rupias:",
    "tip_jar_instruction_2"                           : "Envíanos tu nombre de usuario y un mensaje como comentario.",
    "tip_jar_instruction_3"                           : "Por favor indica si deseas que tu nombre se mantenga anónimo.",
    "tip_jar_opener_end"                              : "Luego de procesar tu propina se te dará el estado de Donante en el sitio.  Esto te permitirá agregar más peticiones en tu fila y tener la capacidad de votar en más de 1 votación a la vez.",
@@ -187,11 +187,11 @@
 
    "random_relay"                                    : "Servidor Aleatorio",
    "redownload_m3u"                                  : "¿Estás sintonizando?  Si acabas de iniciar sesión y estás usando una aplicación externa para escuchar, vuelve a descargar la lista de reproducción MP3 u Ogg.",
-   "sync_stopped"                                    : "Rainwave ha dejado de funcionar.  Actualiza la página y vuelve a intentarlo.",
-   "lost_connection"                                 : "Se ha perdido la conexión con Rainwave.",
-   "sync_retrying"                                   : "Hay problemas comunicándose con Rainwave, un momento...",
+   "sync_stopped"                                    : "Nerdwave ha dejado de funcionar.  Actualiza la página y vuelve a intentarlo.",
+   "lost_connection"                                 : "Se ha perdido la conexión con Nerdwave.",
+   "sync_retrying"                                   : "Hay problemas comunicándose con Nerdwave, un momento...",
    "mobile_sync_retrying"                            : "Problemas de conexión, actualiza la página o intenta más tarde.",
-   "async_error"                                     : "Error comunicándose con Rainwave.  Intenta nuevamente o actualiza la página.",
+   "async_error"                                     : "Error comunicándose con Nerdwave.  Intenta nuevamente o actualiza la página.",
    "deeplink_error"                                  : "Lo sentimos, no pudimos entender la URL que has intentado abrir.",
    "hold_to_rate"                                    : "mantén presionado para evaluar",
 
@@ -350,7 +350,7 @@
 
    "cd_what_is"                                      : "¿Qué es Reposo?",
    "cd_blue_bkg_is"                                  : "Cuando una canción o álbum tiene un fondo azul, está en reposo y no puede ser tocada en este momento.",
-   "cd_why_use_cooldown"                             : "Los tiempos de Reposo son usados de manera que Rainwave no repita canciones y álbumes.",
+   "cd_why_use_cooldown"                             : "Los tiempos de Reposo son usados de manera que Nerdwave no repita canciones y álbumes.",
    "cd_type_of_cooldown"                             : "Tipo de Reposo",
    "cd_example"                                      : "Ejemplo",
    "cd_cooldown_length"                              : "Tiempo de Reposo",
@@ -376,7 +376,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Canciones No Evaluadas",
    "title"                                           : "Título",

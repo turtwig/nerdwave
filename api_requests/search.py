@@ -2,7 +2,7 @@ from api.web import APIHandler
 from api import fieldtypes
 from api.urls import handle_api_url
 from libs import db
-from rainwave.playlist_objects.metadata import make_searchable_string
+from nerdwave.playlist_objects.metadata import make_searchable_string
 from api.exceptions import APIException
 
 
@@ -56,7 +56,7 @@ class SearchHandler(APIHandler):
                 (self.user.id, self.sid, self.user.id, self.sid, s),
             )
 
-        # base SQL here copy pasted from /rainwave/playlist_objects/album.py
+        # base SQL here copy pasted from /nerdwave/playlist_objects/album.py
         if self.user.is_anonymous():
             songs = db.c.fetch_all(
                 "SELECT r4_song_sid.song_id AS id, song_length AS length, song_origin_sid AS origin_sid, song_title AS title, song_added_on AS added_on, "

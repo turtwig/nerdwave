@@ -9,7 +9,7 @@ import libs.config
 import libs.log
 
 parser = argparse.ArgumentParser(
-    description="Dumps data to /tmp/rwstats in CSV format from SQL. Dangerous script in many, many ways - needs Postgres superuser permissions."
+    description="Dumps data to /tmp/nwstats in CSV format from SQL. Dangerous script in many, many ways - needs Postgres superuser permissions."
 )
 parser.add_argument("--config", default=None)
 parser.add_argument("--sid", type=int)
@@ -66,8 +66,8 @@ tables = [
     "r4_vote_history",
 ]
 
-if not os.path.exists("/tmp/rwstats"):
-    print("Make sure /tmp/rwstats exists and is world writable.")
+if not os.path.exists("/tmp/nwstats"):
+    print("Make sure /tmp/nwstats exists and is world writable.")
 else:
     for table in tables:
         print(table)
@@ -83,5 +83,5 @@ else:
             "), ', ') || ' FROM %s'" % (table, table)
         )
         libs.db.c.update(
-            "COPY (%s) TO '/tmp/rwstats/%s.csv' WITH CSV HEADER" % (query, table)
+            "COPY (%s) TO '/tmp/nwstats/%s.csv' WITH CSV HEADER" % (query, table)
         )

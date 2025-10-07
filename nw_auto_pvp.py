@@ -9,14 +9,14 @@ from libs import db
 from libs import cache
 from libs import log
 
-from rainwave.events import pvpelection
+from nerdwave.events import pvpelection
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Rainwave PVP Hour generation script.")
+    parser = argparse.ArgumentParser(description="Nerdwave PVP Hour generation script.")
     parser.add_argument("--config", default=None)
     args = parser.parse_args()
     config.load(args.config)
-    log_file = "%s/rw_auto_pvp.log" % (config.get_directory("log_dir"),)
+    log_file = "%s/nw_auto_pvp.log" % (config.get_directory("log_dir"),)
     log.init(log_file, config.get("log_level"))
     db.connect()
     cache.connect()

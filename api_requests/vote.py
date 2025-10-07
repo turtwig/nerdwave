@@ -5,9 +5,9 @@ from api import fieldtypes
 from api.web import APIHandler
 from api.exceptions import APIException
 from api.urls import handle_api_url
-import rainwave.schedule
-from rainwave.events.event import BaseEvent
-from rainwave.events.election import Election
+import nerdwave.schedule
+from nerdwave.events.event import BaseEvent
+from nerdwave.events.election import Election
 
 from libs import cache
 from libs import config
@@ -63,7 +63,7 @@ class SubmitVote(APIHandler):
     # this will never get executed for WebSocket connections, so this code
     # is duplicated in sync.py
     def on_finish(self):
-        live_voting = rainwave.schedule.update_live_voting(self.sid)
+        live_voting = nerdwave.schedule.update_live_voting(self.sid)
         zeromq.publish(
             {
                 "action": "live_voting",

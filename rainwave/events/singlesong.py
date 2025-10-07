@@ -1,5 +1,5 @@
-from rainwave.events.event import BaseEvent
-from rainwave import playlist
+from nerdwave.events.event import BaseEvent
+from nerdwave import playlist
 
 
 class SingleSong(BaseEvent):

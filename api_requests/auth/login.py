@@ -55,6 +55,6 @@ class PhpbbAuth(HTMLRequest, R4SetupSessionMixin):
             raise APIException("login_failed")
 
         # setup/save r4 session
-        self.setup_rainwave_session_and_redirect(
+        self.setup_nerdwave_session_and_redirect(
             db_entry["user_id"], self.get_destination()
         )

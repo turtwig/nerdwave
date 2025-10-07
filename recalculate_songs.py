@@ -5,7 +5,7 @@ import argparse
 from libs import config
 from libs import db
 from libs import log
-from rainwave.playlist import Song
+from nerdwave.playlist import Song
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

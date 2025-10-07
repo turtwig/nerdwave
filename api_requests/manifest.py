@@ -24,13 +24,13 @@ class ManifestJSON(HTMLRequest):
         m = {
             "lang": self.locale.code[:2],
             "short_name": config.station_id_friendly[self.sid],
-            "name": "Rainwave %s" % config.station_id_friendly[self.sid],
+            "name": "Nerdwave %s" % config.station_id_friendly[self.sid],
             "description": self.locale.translate(
                 "station_description_id_%s" % self.sid
             ),
             "launch_path": "/",
             "start_url": "/",
-            "developer": {"name": "Rainwave", "url": "https://rainwave.cc"},
+            "developer": {"name": "Nerdwave", "url": "https://nerdwave.cc"},
             "fullscreen": True,
             "orientation": "portrait",
             "display": "standalone",

@@ -7,11 +7,11 @@ import libs.config
 import libs.log
 import libs.db
 import libs.cache
-import rainwave.playlist
-import rainwave.playlist_objects.album
+import nerdwave.playlist
+import nerdwave.playlist_objects.album
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Rainwave song scanning daemon.")
+    parser = argparse.ArgumentParser(description="Nerdwave song scanning daemon.")
     parser.add_argument("--config", default=None)
     parser.add_argument("--full", action="store_true")
     parser.add_argument("--reset", action="store_true")
@@ -19,12 +19,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     libs.config.load(args.config)
     libs.log.init(
-        "%s/rw_scanner.log" % libs.config.get_directory("log_dir"),
+        "%s/nw_scanner.log" % libs.config.get_directory("log_dir"),
         "debug" if (args.art or args.full) else libs.config.get("log_level"),
     )
 
     for sid in libs.config.station_ids:
-        rainwave.playlist_objects.album.clear_updated_albums(sid)
+        nerdwave.playlist_objects.album.clear_updated_albums(sid)
 
     try:
         libs.db.connect()

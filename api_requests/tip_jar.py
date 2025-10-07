@@ -8,7 +8,7 @@ from libs import db
 
 @handle_api_url("tip_jar")
 class TipJarContents(APIHandler):
-    description = "Returns a list of donations Rainwave has had."
+    description = "Returns a list of donations Nerdwave has had."
     return_name = "tip_jar"
     allow_get = True
     login_required = False
@@ -48,7 +48,7 @@ class TipJarHTML(PrettyPrintAPIMixin, TipJarContents):
         self.write(
             """
 			<div>
-				<a href='https://paypal.me/Rainwave/5USD'>Donate at https://paypal.me/Rainwave</a>
+				<a href='https://paypal.me/Nerdwave/5USD'>Donate at https://paypal.me/Nerdwave</a>
 			</div>"""
         )
 

@@ -9,7 +9,7 @@ from api.urls import handle_api_url
 from api_requests.admin_web.index import AlbumList
 from api_requests.admin_web.index import SongList
 
-from rainwave.playlist import Song, Album, SongGroup
+from nerdwave.playlist import Song, Album, SongGroup
 
 
 @handle_api_url("admin/associate_groups_add_song")

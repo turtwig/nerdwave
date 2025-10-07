@@ -5,7 +5,7 @@
 from libs import config
 from libs import db
 from libs import log
-from rainwave.playlist_objects.song import make_searchable_string
+from nerdwave.playlist_objects.song import make_searchable_string
 
 config.load()
 log.init()

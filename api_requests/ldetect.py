@@ -1,7 +1,7 @@
 from time import time as timestamp
 
 from api import fieldtypes
-from api.web import RainwaveHandler
+from api.web import NerdwaveHandler
 from api.urls import handle_api_url
 from api.urls import handle_url
 from api.exceptions import APIException
@@ -9,14 +9,14 @@ from api.exceptions import APIException
 from libs import cache
 from libs import log
 from libs import db
-from rainwave import user
+from nerdwave import user
 from backend import sync_to_front
 
 # Sample Icecast query:
 # &server=myserver.com&port=8000&client=1&mount=/live&user=&pass=&ip=127.0.0.1&agent="My%20player"
 
 
-class IcecastHandler(RainwaveHandler):
+class IcecastHandler(NerdwaveHandler):
     auth_required = False
     sid_required = False
     description = "Accessible only to relays for the purpose of tracking listeners."

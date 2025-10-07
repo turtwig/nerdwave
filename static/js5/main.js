@@ -10,7 +10,7 @@ var User;
 var Stations = [];
 var API;
 var RWAudio;
-var rainwaveInitialized = false;
+var nerdwaveInitialized = false;
 var LOCALE = 'en_CA';
 var lang;
 var INIT_TASKS = { 
@@ -21,22 +21,22 @@ var INIT_TASKS = {
 var MOBILE = navigator.userAgent.toLowerCase().includes("mobile") || navigator.userAgent.toLowerCase().includes("android");
 var Prefs;
 
-function rainwaveInit() {
+function nerdwaveInit() {
   "use strict";
 
   if (!document.body) {
-    document.addEventListener("load", rainwaveInit);
+    document.addEventListener("load", nerdwaveInit);
     return;
   }
-  if (rainwaveInitialized || !window.BOOTSTRAP || !window.ALL_LANG || !window.RWTemplates) {
+  if (nerdwaveInitialized || !window.BOOTSTRAP || !window.ALL_LANG || !window.RWTemplates) {
     return;
   }
 
-  rainwaveInitialized = true;
+  nerdwaveInitialized = true;
 
   Prefs = PrefsInit(BOOTSTRAP.locales, BOOTSTRAP.cookie_domain);
   
-  var potentialLang = (docCookies.getItem("rw_lang") || navigator.language).replace("-", "_");
+  var potentialLang = (docCookies.getItem("nw_lang") || navigator.language).replace("-", "_");
   Object.entries(ALL_LANG).forEach(function (entry) {
     if (entry[0].toLowerCase() == potentialLang.toLowerCase()) {
       LOCALE = entry[0];
@@ -62,7 +62,7 @@ function rainwaveInit() {
   // this global API variable name and the function renaming
   // was required after the API changed to something useable
   // by the outside world.
-  API = RainwaveAPI;
+  API = NerdwaveAPI;
   API.exceptionHandler = ErrorHandler.onerror_handler;
   API.onError = ErrorHandler.permanent_error;
   API.onErrorRemove = ErrorHandler.remove_permanent_error;
@@ -133,7 +133,7 @@ function rainwaveInit() {
 
   var order = [5, 1, 4, 2, 3];
   var colors = {
-    1: "#1f95e5", // Rainwave blue
+    1: "#1f95e5", // Nerdwave blue
     2: "#de641b", // OCR Orange
     3: "#b7000f", // Red
     4: "#6e439d", // Indigo

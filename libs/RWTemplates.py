@@ -1,6 +1,6 @@
 ##########################################
 #
-# Rainwave Javascript Templating System
+# Nerdwave Javascript Templating System
 #
 # Takes in Handlebars-like templates and outputs native Javascript DOM calls.
 # Optionally saves generated elements.
@@ -21,7 +21,7 @@
 # Also mucks with having shorthand versions of native functions for minification.
 # So careful if you're also calling things as Element.prototype.(s|a) and document.c.
 #
-# Cannot deal with SVG (or other namespaces) except for Rainwave's particular use case.
+# Cannot deal with SVG (or other namespaces) except for Nerdwave's particular use case.
 #
 # Templates look much like Handlebars, except handlers are dealt with differently:
 #    Handlebars: <div>{{ format_time time }}</div>
@@ -111,7 +111,7 @@ def compile_templates(source_dir, dest_file, **kwargs):
                     f[: f.rfind(".")],
                 ).replace(os.sep, ".")
                 tfile = open(os.path.join(root, f))
-                parser = RainwaveParser(tname, **kwargs)
+                parser = NerdwaveParser(tname, **kwargs)
                 parser.feed(tfile.read())
                 o.write(parser.close())
                 tfile.close()
@@ -185,7 +185,7 @@ _bind_reserved_words = (
 )
 
 
-class RainwaveParser(HTMLParser):
+class NerdwaveParser(HTMLParser):
     scope_bound = False
 
     def parse_context_key(self, context_key):
@@ -341,7 +341,7 @@ class RainwaveParser(HTMLParser):
                 )
             else:
                 raise Exception(
-                    '(%s) The Rainwave templater cannot support SVG unless in this RW-specific format: <svg use="%s" attr="..." ...>'
+                    '(%s) The Nerdwave templater cannot support SVG unless in this RW-specific format: <svg use="%s" attr="..." ...>'
                     % (self.name, svg_use)
                 )
         else:
@@ -646,7 +646,7 @@ if __name__ == "__main__":
     import argparse
 
     argp = argparse.ArgumentParser(
-        description="Rainwave Javascript Templating system.  Takes Handlebars-style files from templatedir, outputs native Javascript to outfile."
+        description="Nerdwave Javascript Templating system.  Takes Handlebars-style files from templatedir, outputs native Javascript to outfile."
     )
     argp.add_argument("--templatedir", default="jstemplates")
     argp.add_argument("--outfile", default="RWTemplates.templates.js")

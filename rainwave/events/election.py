@@ -6,11 +6,11 @@ from libs import db
 from libs import config
 from libs import cache
 from libs import log
-from rainwave import playlist
-from rainwave import request
-from rainwave.user import User
-from rainwave.events import event
-from rainwave.playlist_objects.song import SongNonExistent
+from nerdwave import playlist
+from nerdwave import request
+from nerdwave.user import User
+from nerdwave.events import event
+from nerdwave.playlist_objects.song import SongNonExistent
 
 _request_interval = {}
 _request_sequence = {}
