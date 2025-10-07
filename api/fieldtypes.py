@@ -7,7 +7,7 @@ from urllib.parse import parse_qsl, urlparse
 
 from libs import config
 from libs import db
-import rainwave.events.event
+import nerdwave.events.event
 
 string_error = "must be a string."
 
@@ -369,7 +369,7 @@ def icecast_mount(s, request=None):
     #
     # /all.ogg?1000:1a2b3c4d5e&1.2.3.4
     #
-    # To authenticate the streaming client, Icecast will send a request to Rainwave (listener_add)
+    # To authenticate the streaming client, Icecast will send a request to Nerdwave (listener_add)
     # and include the above string in the `mount` query argument.
     #
     # Because we aren't using the usual name=value query format, we can parse the query string with
@@ -498,7 +498,7 @@ producer_type_error = None
 
 
 def producer_type(s, request=None):
-    if s not in rainwave.events.event.all_producers:
+    if s not in nerdwave.events.event.all_producers:
         return None
     return s
 

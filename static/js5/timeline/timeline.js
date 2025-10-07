@@ -52,7 +52,7 @@ var Timeline = (function () {
       }
     });
 
-    template = RWTemplates.timeline.timeline();
+    template = NWTemplates.timeline.timeline();
     root_template.timeline.parentNode.replaceChild(
       template.timeline,
       root_template.timeline
@@ -213,7 +213,7 @@ var Timeline = (function () {
       closeable: !not_closeable,
       closed: false,
     };
-    RWTemplates.timeline.message(msg);
+    NWTemplates.timeline.message(msg);
     msg.$t.el.style[Fx.transform] = "translateY(-50px)";
     el.appendChild(msg.$t.el);
     messages.push(msg);

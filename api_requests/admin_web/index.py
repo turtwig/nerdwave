@@ -50,7 +50,7 @@ class AdminIndex(api.web.HTMLRequest):
 
         self.render(
             "admin_frame.html",
-            title="Rainwave Admin",
+            title="Nerdwave Admin",
             api_url=config.get("api_external_url_prefix"),
             user_id=self.user.id,
             api_key=self.user.ensure_api_key(),
@@ -67,7 +67,7 @@ class DJIndex(api.web.HTMLRequest):
     def get(self):
         self.render(
             "admin_frame.html",
-            title="Rainwave DJ",
+            title="Nerdwave DJ",
             api_url=config.get("api_external_url_prefix"),
             user_id=self.user.id,
             api_key=self.user.ensure_api_key(),

@@ -1,5 +1,5 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
 
    "language_name"                                   : "Português",
    "language_name_short"                             : "PT-PT",
@@ -50,7 +50,7 @@
    "no_results"                                      : "Sem resultados.",
    "empty_list"                                      : "Lista vazia.",
    "no_search_results"                               : "Sem resultados.",
-   "server_just_started"                             : "A Rainwave está a reiniciar...",
+   "server_just_started"                             : "A Nerdwave está a reiniciar...",
    "station_paused"                                  : "O DJ colocou a estação em pausa.",
    "album_on_other_station"                          : "Álbum não disponível nesta estação.",
    "album_is_dj_only"                                : "Álbum exclusivo para este evento.",
@@ -59,15 +59,15 @@
    "search_string_too_short"                         : "A pesquisa precisa de conter 3 ou mais letras.",
    "search_result_limit"                             : "(Demasiados resultados. Tenta ser mais específico na tua pesquisa.)",
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Oops!",
    "something_went_wrong"                            : "Ocorreu um erro ao carregar do servidor. :(",
-   "crash_happened"                                  : "A Rainwave está em baixo. :(",
+   "crash_happened"                                  : "A Nerdwave está em baixo. :(",
    "report_sending"                                  : "A enviar um relatório para os nossos servidores...",
    "report_sent"                                     : "Recebemos o relatório do erro e vamos verificar!",
    "report_error"                                    : "Não foi possível enviar um relatório para os nossos servidores. :(",
-   "please_refresh"                                  : "Recarrega a página para voltar à Rainwave.",
+   "please_refresh"                                  : "Recarrega a página para voltar à Nerdwave.",
    "report_submitted"                                : "Relatório enviado!",
 
    "__comment__"                 : "API Key Management",
@@ -141,7 +141,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Doações",
-   "tip_jar_opener"                                  : "A Rainwave vai continuar intependentemente das doações. Caso nos queiras dar alguns trocos, é simples:",
+   "tip_jar_opener"                                  : "A Nerdwave vai continuar intependentemente das doações. Caso nos queiras dar alguns trocos, é simples:",
    "tip_jar_instruction_2"                           : "Envia-nos o teu nome de utilizador e um comentário.",
    "tip_jar_instruction_3"                           : "Por favor mencione se gostaria que seu nome seja mantido anônimo.",
    "tip_jar_opener_end"                              : "Depois de processarmos a tua doação, vai receber o estatuto de Doador no site. Poderás fazer mais pedidos, assim como votar em mais de uma eleição ao mesmo tempo!",
@@ -174,9 +174,9 @@
 
    "random_relay"                                    : "Transmissora aleatória",
    "redownload_m3u"                                  : "Estás a ouvir agora? Se acabaste de fazer login e estiveres a usar um programa externo para ouvir, faz download da lista de reprodução novamente.",
-   "sync_stopped"                                    : "A Rainwave deixou de funcionar. Por favor atualiza a página e tente novamente.",
+   "sync_stopped"                                    : "A Nerdwave deixou de funcionar. Por favor atualiza a página e tente novamente.",
    "lost_connection"                                 : "Ligação com o servidor perdida.",
-   "sync_retrying"                                   : "Problemas em ligar ao servidor da Rainwave, por favor aguarda...",
+   "sync_retrying"                                   : "Problemas em ligar ao servidor da Nerdwave, por favor aguarda...",
    "mobile_sync_retrying"                            : "A ligação expirou, por favor atualiza ou tenta novamente mais tarde.",
    "async_error"                                     : "Erro ao comunicar com o servidor. Por favor tenta novamente ou volta a carregar.",
    "deeplink_error"                                  : "Erro ao interpretar o URL.",
@@ -275,7 +275,7 @@
    "station_menu_description_id_2"                   : "Todas as músicas oficiais do OverClocked ReMix.",
    "station_menu_description_id_3"                   : "Remixes oficiais e produzidos por fãs.",
    "station_menu_description_id_4"                   : "Chiptunes originais e de vídeo jogos.",
-   "station_menu_description_id_5"                   : "Todo a biblioteca da Rainwave.",
+   "station_menu_description_id_5"                   : "Todo a biblioteca da Nerdwave.",
    "now_playing_on_..."                              : "A passar agora na estação %(station)",
 
    "__comment__"                 : "Preferences",
@@ -333,7 +333,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Músicas não avaliadas",
    "title"                                           : "Título",

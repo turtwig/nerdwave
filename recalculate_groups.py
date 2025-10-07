@@ -5,7 +5,7 @@ import argparse
 from libs import config
 from libs import db
 from libs import log
-from rainwave.playlist import SongGroup
+from nerdwave.playlist import SongGroup
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Reconciles song<>group data.")

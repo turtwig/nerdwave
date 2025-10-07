@@ -173,7 +173,7 @@ var PrefsInit = (function (locales, cookie_domain) {
   };
 
   self.change_language = function (new_value) {
-    docCookies.setItem("rw_lang", new_value, Infinity, "/", cookie_domain);
+    docCookies.setItem("nw_lang", new_value, Infinity, "/", cookie_domain);
     document.location.reload();
   };
 

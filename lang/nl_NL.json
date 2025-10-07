@@ -1,11 +1,11 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
    "__comment__"                 : "Please put them in your actual language. (i.e. use kanji!) Short version should be < 4 characters.",
 
    "language_name"                                   : "Nederlands",
    "language_name_short"                             : "NL",
    
-    "__comment__"                 : "This shows up after 'Rainwave' on Google results.  e.g. 'Rainwave Video Game Music Radio: Covers'",
+    "__comment__"                 : "This shows up after 'Nerdwave' on Google results.  e.g. 'Nerdwave Video Game Music Radio: Covers'",
 
    "page_title_on_google"                            : "Video Game Music Radio",
 
@@ -59,7 +59,7 @@
    "no_results"                                      : "Geen resultaten.",
    "empty_list"                                      : "Leeg lijst.",
    "no_search_results"                               : "Geen zoekresultaten.",
-   "server_just_started"                             : "Rainwave is aan het herstarten.",
+   "server_just_started"                             : "Nerdwave is aan het herstarten.",
    "station_paused"                                  : "Station is momenteel gepauzeerd door de DJ.",
    "album_on_other_station"                          : "Album is niet beschikbaar op dit station, sorry!",
    "song_on_other_station"                           : "Nummer is niet beschikbaar op %(station).",
@@ -71,11 +71,11 @@
 
    "auth_failed_message"                             : "Ons verificatiesysteem faalde!  We hebben deze bug al een paar weken bij anonieme gebruikers, en we zijn het verificatiesysteem momenteel aan het herschrijven.  Gelieve de pagina te verversen, of beter, REGISTREER EN LOGIN door de link naar forum hieronder te gebruiken wat het probleem zal oplossen!",
    
- "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+ "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Oeps",
    "something_went_wrong"                            : "Er is iets misgegaan bij het laden van de server. :(",
-   "crash_happened"                                  : "Rainwave is gecrasht. :(",
+   "crash_happened"                                  : "Nerdwave is gecrasht. :(",
    "report_sending"                                  : "We sturen een formulier hierover naar onze servers.",
    "report_sent"                                     : "De error is gerapporteerd en we zullen het bekijken!",
    "report_error"                                    : "We konden zelfs geen formulier sturen naar onze servers! :(",
@@ -172,7 +172,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Fooi Pot",
-   "tip_jar_opener"                                  : "Rainwave zal altijd blijven doorgaan ongeacht wat er in de Fooi Pot zit.  Als u geïnteresseerd bent in het geven van een fooi; Het is simpel:",
+   "tip_jar_opener"                                  : "Nerdwave zal altijd blijven doorgaan ongeacht wat er in de Fooi Pot zit.  Als u geïnteresseerd bent in het geven van een fooi; Het is simpel:",
    "tip_jar_instruction_1"                           : "Stuur een PayPal gift met het Paypal.me link hieronder.",
    "tip_jar_instruction_2"                           : "Verstuur ons uw gebruikersnaam en een bericht als een reactie.",
    "tip_jar_instruction_3"                           : "Geef alstublieft aan of u wilt dat u anoniem wilt blijven.",
@@ -206,11 +206,11 @@
 
    "random_relay"                                    : "Willekeurige Relais",
    "redownload_m3u"                                  : "Bent u aan het verbinden met dit station? Als u net ingelogd bent en een externe app gebruikt om te luisteren, download dan de afspeellijst opnieuw",
-   "sync_stopped"                                    : "Rainwave is gestopt met reageren. Gelieve de pagina te verversen en probeer het opnieuw.",
-   "lost_connection"                                 : "Verbinding met Rainwave verloren.",
-   "sync_retrying"                                   : "Problemen bij het communiceren met de Rainwave server, even geduld a.u.b. ...",
+   "sync_stopped"                                    : "Nerdwave is gestopt met reageren. Gelieve de pagina te verversen en probeer het opnieuw.",
+   "lost_connection"                                 : "Verbinding met Nerdwave verloren.",
+   "sync_retrying"                                   : "Problemen bij het communiceren met de Nerdwave server, even geduld a.u.b. ...",
    "mobile_sync_retrying"                            : "Connectie timeout problemen, ververs alstublieft de pagina of probeer het later opnieuw.",
-   "async_error"                                     : "Fout bij het communiceren met Rainwave. Probeer het opnieuw of ververs de pagina.",
+   "async_error"                                     : "Fout bij het communiceren met Nerdwave. Probeer het opnieuw of ververs de pagina.",
    "deeplink_error"                                  : "Fout bij het begrijpen van de ingevoerde URL.",
    "hold_to_rate"                                    : "Hou ingedrukt om te waarderen",
 
@@ -315,7 +315,7 @@
    "station_menu_description_id_2"                   : "OverClocked ReMixes en albums.",
    "station_menu_description_id_3"                   : "Officiële en fan-made remixes.",
    "station_menu_description_id_4"                   : "Videogame en originele chiptunes.",
-   "station_menu_description_id_5"                   : "De volledige Rainwave afspeellijst.",
+   "station_menu_description_id_5"                   : "De volledige Nerdwave afspeellijst.",
    "now_playing_on_..."                              : "Nu aan het afspelen op %(station)",
 
    "__comment__"                 : "Preferences",
@@ -369,7 +369,7 @@
 
    "cd_what_is"                                      : "Wat Is Cooldown?",
    "cd_blue_bkg_is"                                  : "Als een nummer of album een blauwe achtergrond heeft, is het op cooldown en kan het momenteel niet gespeeld worden.",
-   "cd_why_use_cooldown"                             : "Cooldowns worden gebruikt zodat Rainwave gen nummers en albums herhaalt.",
+   "cd_why_use_cooldown"                             : "Cooldowns worden gebruikt zodat Nerdwave gen nummers en albums herhaalt.",
    "cd_type_of_cooldown"                             : "Type van Cooldown",
    "cd_example"                                      : "Voorbeeld",
    "cd_cooldown_length"                              : "Cooldown Lengte",
@@ -395,7 +395,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Onbeoordeelde Nummers",
    "title"                                           : "Titel",

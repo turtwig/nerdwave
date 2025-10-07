@@ -28,7 +28,7 @@ def get_gain_for_song(file):
     # this code below would be better but does not close file handlers and crashes RW eventually
 
     # mostly copy/pasted from rgain3 source
-    # adapted for Rainwave usage
+    # adapted for Nerdwave usage
 
     # exceptions = []
 

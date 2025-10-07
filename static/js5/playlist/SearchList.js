@@ -14,7 +14,7 @@ var SearchList = function (root_el, sort_key, search_key) {
 
   var self = {};
   self.auto_trim = false;
-  RWTemplates.searchlist(self, root_el);
+  NWTemplates.searchlist(self, root_el);
   var template = self.$t;
 
   var stretcher = document.createElement("div");

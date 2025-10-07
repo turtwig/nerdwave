@@ -1,11 +1,11 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
    "__comment__"                 : "Please put them in your actual language. (i.e. use kanji!) Short version should be < 4 characters.",
 
    "language_name"                                   : "Français",
    "language_name_short"                             : "FR",
 
-   "__comment__"                 : "This shows up after 'Rainwave' on Google results.  e.g. 'Rainwave Video Game Music Radio: Covers'",
+   "__comment__"                 : "This shows up after 'Nerdwave' on Google results.  e.g. 'Nerdwave Video Game Music Radio: Covers'",
 
    "page_title_on_google"                            : "Radio de musique de jeux vidéo",
 
@@ -55,7 +55,7 @@
    "no_results"                                      : "Aucun résultat.",
    "empty_list"                                      : "Liste vide.",
    "no_search_results"                               : "Aucun résultat de recherche.",
-   "server_just_started"                             : "Rainwave redémarre",
+   "server_just_started"                             : "Nerdwave redémarre",
    "station_paused"                                  : "La liste de lecture est suspendue par le dj.",
    "album_on_other_station"                          : "Cet album n'est pas disponible sur cette station, désolé!",
    "album_is_dj_only"                                : "Cet album est exclusif à cet événement, désolé!",
@@ -64,15 +64,15 @@
    "search_string_too_short"                         : "La recherche doit faire plus de trois lettres.",
    "search_result_limit"                             : "(Trop de résultats. Veuillez raffiner votre recherche.)",
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Oups",
    "something_went_wrong"                            : "Quelque chose s'est mal passé. :(",
-   "crash_happened"                                  : "Rainwave a planté. :(",
+   "crash_happened"                                  : "Nerdwave a planté. :(",
    "report_sending"                                  : "Soumission d'un rapport concernant l'erreur...",
    "report_sent"                                     : "L'erreur a été soumise! Nous allons y jeter un coup d'oeil!",
    "report_error"                                    : "... et nous y sommes même pas parvenus! :(",
-   "please_refresh"                                  : "Actualisez la page pour ressusciter Rainwave.",
+   "please_refresh"                                  : "Actualisez la page pour ressusciter Nerdwave.",
    "report_submitted"                                : "Rapport soumis",
 
    "__comment__"                 : "API Key Management",
@@ -149,7 +149,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Dons",
-   "tip_jar_opener"                                  : "Rainwave apprécie vos dons mais ils ne sont pas nécessaires ^^  Toutefois vos gils et vos roupies sont les bienvenus :",
+   "tip_jar_opener"                                  : "Nerdwave apprécie vos dons mais ils ne sont pas nécessaires ^^  Toutefois vos gils et vos roupies sont les bienvenus :",
    "tip_jar_instruction_2"                           : "Laissez-nous votre nom d'utilisateur et un message en commentaire.",
    "tip_jar_instruction_3"                           : "Indiquez-nous si vous préférez que votre nom reste anonyme.",
    "tip_jar_opener_end"                              : "Lorsque nous aurons reçu votre don, vous obtiendrez le statut Donateur sur le site. Ce statut vous permet d'ajouter plus de chansons à la file d'attente, ainsi que de voter sur plus d'une chanson durant une séance de vote.",
@@ -182,9 +182,9 @@
 
    "random_relay"                                    : "Relais aléatoire",
    "redownload_m3u"                                  : "Êtes-vous en train de vous syntoniser? Si vous venez de vous authentifier et vous utilisez un lecteur externe pour écouter cette radio, S.v.p. retélécharger le MP3 ou OGG M3U.",
-   "sync_stopped"                                    : "Rainwave ne répond plus. S.v.p. actualisez la page et réessayer.",
-   "lost_connection"                                 : "Connexion perdue vers Rainwave.",
-   "sync_retrying"                                   : "Difficulté à communiquer avec Rainwave, veuillez patienter...",
+   "sync_stopped"                                    : "Nerdwave ne répond plus. S.v.p. actualisez la page et réessayer.",
+   "lost_connection"                                 : "Connexion perdue vers Nerdwave.",
+   "sync_retrying"                                   : "Difficulté à communiquer avec Nerdwave, veuillez patienter...",
    "mobile_sync_retrying"                            : "Problèmes de connexion, s.v.p. actualisez la page ou réessayez plus tard.",
    "async_error"                                     : "Problèmes de connexion, s.v.p. actualisez la page et réessayez.",
    "deeplink_error"                                  : "Désolé, ce lien semble mener nul part.",
@@ -341,7 +341,7 @@
 
    "cd_what_is"                                      : "Qu'est-ce qu'un cooldown?",
    "cd_blue_bkg_is"                                  : "Lorsqu'une chanson ou un album a un arrière-plan bleu, cela signifie qu'il est en cooldown et ne peux être joué pour l'instant.",
-   "cd_why_use_cooldown"                             : "Les cooldowns permettent à Rainwave d'éviter de rejouer trop souvent les mêmes chansons ou albums.",
+   "cd_why_use_cooldown"                             : "Les cooldowns permettent à Nerdwave d'éviter de rejouer trop souvent les mêmes chansons ou albums.",
    "cd_type_of_cooldown"                             : "Type de cooldown",
    "cd_example"                                      : "Exemple",
    "cd_cooldown_length"                              : "Durée des cooldowns",
@@ -367,7 +367,7 @@
    "timeformat_m"                                    : "m ",
    "timeformat_s"                                    : "s ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Chansons sans évaluation",
    "title"                                           : "Titre",

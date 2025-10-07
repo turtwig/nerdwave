@@ -5,7 +5,7 @@ from api.urls import handle_api_url
 from api.exceptions import APIException
 from api import fieldtypes
 
-from rainwave.events.oneup import OneUpProducer
+from nerdwave.events.oneup import OneUpProducer
 
 
 @handle_api_url("admin/list_power_hours")

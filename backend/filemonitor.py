@@ -14,8 +14,8 @@ from libs import log
 from libs import cache
 from libs import db
 
-from rainwave import playlist
-from rainwave.playlist_objects.song import PassableScanError
+from nerdwave import playlist
+from nerdwave.playlist_objects.song import PassableScanError
 
 mimetypes.init()
 
@@ -29,7 +29,7 @@ class AlbumArtNoAlbumFoundError(PassableScanError):
 
 def write_unmatched_art_log():
     with open(
-        os.path.join(config.get_directory("log_dir"), "rw_unmatched_art.log"), "w"
+        os.path.join(config.get_directory("log_dir"), "nw_unmatched_art.log"), "w"
     ) as unmatched_log:
         for album_art_tuple in _found_album_art:
             unmatched_log.write(album_art_tuple[0])

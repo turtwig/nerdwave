@@ -117,7 +117,7 @@ var AlbumView = function (album) {
     });
   }
 
-  var template = RWTemplates.detail.album(album, document.createElement("div"));
+  var template = NWTemplates.detail.album(album, document.createElement("div"));
   AlbumArt(album.art, template.art);
 
   if (template.category_rollover) {
@@ -205,7 +205,7 @@ var AlbumView = function (album) {
         });
         template._root.appendChild(h2);
         template._root.appendChild(
-          RWTemplates.detail.songtable({ songs: songs[Stations[i].id] })._root
+          NWTemplates.detail.songtable({ songs: songs[Stations[i].id] })._root
         );
         for_keynav.push({ songs: songs[Stations[i].id] });
       }
@@ -224,7 +224,7 @@ var AlbumView = function (album) {
     template._root.appendChild(msg);
   } else {
     template._root.appendChild(
-      RWTemplates.detail.songtable({ songs: album.songs })._root
+      NWTemplates.detail.songtable({ songs: album.songs })._root
     );
 
     if (!Sizing.simple) {

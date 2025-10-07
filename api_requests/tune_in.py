@@ -58,7 +58,7 @@ class TuneInIndex(api.web.HTMLRequest):
 
         self.set_header(
             "Content-Disposition",
-            'inline; filename="rainwave_%s_%s.m3u"'
+            'inline; filename="nerdwave_%s_%s.m3u"'
             % (config.station_id_friendly[self.sid].lower(), filetype),
         )
 
@@ -68,7 +68,7 @@ class TuneInIndex(api.web.HTMLRequest):
         stream_filename = get_stream_filename(self.sid, filetype, self.user)
 
         self.write(
-            "#EXTINF:0,Rainwave %s: %s\n"
+            "#EXTINF:0,Nerdwave %s: %s\n"
             % (
                 config.station_id_friendly[self.sid],
                 self.locale.translate("random_relay"),
@@ -78,7 +78,7 @@ class TuneInIndex(api.web.HTMLRequest):
 
         for relay in config.public_relays[self.sid]:
             self.write(
-                "#EXTINF:0, Rainwave %s: %s Relay\n"
+                "#EXTINF:0, Nerdwave %s: %s Relay\n"
                 % (config.station_id_friendly[self.sid], relay["name"])
             )
             self.write(

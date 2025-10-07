@@ -1,5 +1,5 @@
 {
-  "__comment__": "language_name appears in the pulldown box for language options on Rainwave.",
+  "__comment__": "language_name appears in the pulldown box for language options on Nerdwave.",
 
   "language_name": "Polski",
   "language_name_short": "PL",
@@ -47,7 +47,7 @@
   "request_queue_paused": "Kolejka głosowania zatrzymana.",
   "request_queue_unpaused": "Kolejka głosowania wznowiona.",
   "no_results": "Brak wyników.",
-  "server_just_started": "Rainwave jest restartowany.",
+  "server_just_started": "Nerdwave jest restartowany.",
 
   "__comment__": "API Key Management",
 
@@ -103,7 +103,7 @@
   "__comment__": "Tip Jar",
 
   "tip_jar": "Sakiewka",
-  "tip_jar_opener": "Rainwave będzie wciąż działać niezależnie od tego ile znajduje się w sakiewce. Chcesz się dorzucić i wspomóc stronę, to proste:",
+  "tip_jar_opener": "Nerdwave będzie wciąż działać niezależnie od tego ile znajduje się w sakiewce. Chcesz się dorzucić i wspomóc stronę, to proste:",
   "tip_jar_instruction_2": "Wyślij nam swoje imię i komentarz w komentarzu płatności.",
   "tip_jar_instruction_3": "Proszę poinformuj nas czy chciałbyś pozostać anonimowy.",
   "tip_jar_opener_end": "Po sfinalizowaniu darowizny, otrzymasz status Donor na stronie.  To da Ci więcej głosów i możliwość głosowania w więcej, niż jednym głosowaniu jednocześnie.",
@@ -133,9 +133,9 @@
 
   "redownload_m3u": "Podłączasz się?  Jeśli dopiero się zalogowałeś, proszę ściągnąć na nowo playlistę.",
   "random_relay": "Losowa Stacja",
-  "sync_stopped": "Rainwave przestało działać.  Proszę odświeżyć lub spróbować później.",
+  "sync_stopped": "Nerdwave przestało działać.  Proszę odświeżyć lub spróbować później.",
   "lost_connection": "Utracono połączenie z serwerem.",
-  "sync_retrying": "Kłopot w porozumiewaniu się z serwerem Rainwave, proszę czekać...",
+  "sync_retrying": "Kłopot w porozumiewaniu się z serwerem Nerdwave, proszę czekać...",
   "mobile_sync_retrying": "Upłynął czas oczekiwania, proszę odświeżyć lub spróbować później.",
   "async_error": "Błąd w kontakcie z serwerem.  Spróbuj ponownie lub odśwież.",
   "deeplink_error": "Problem w zrozumieniu wprowadzonego linku URL.",
@@ -144,12 +144,12 @@
   "not_an_election": "To nie wybory.",
   "rate_song_mobile_dialog": "Oceń Utwór",
 
-  "catastrophic_error": "Rainwave uległ awarii :(",
+  "catastrophic_error": "Nerdwave uległ awarii :(",
   "submit_javascript_error": "Proszę zgłosić ten błąd na forum, abyśmy mogli go naprawić.",
 
   "__comment__": "O Nas",
 
-  "about_window_header": "O Rainwave",
+  "about_window_header": "O Nerdwave",
   "staff_list_header": "Zespół",
   "relay_sponsors_header": "Sponsorzy",
   "translators_header": "Tłumacze",
@@ -157,7 +157,7 @@
   "design_by": "Design Strony",
   "donation_info_label": "Informacje o Darowiznach",
   "donation_info_link": "Szczegóły",
-  "github_info_label": "Repozytorium Open Source Rainwave",
+  "github_info_label": "Repozytorium Open Source Nerdwave",
   "github_info_link": "Odwiedź GitHub",
 
   "__comment__": "Widok Listy Odtwarzania",
@@ -222,7 +222,7 @@
   "station_menu_description_id_2": "Wszystkie oficjalne ścieżki OverClocked ReMix.",
   "station_menu_description_id_3": "Oficjalne i stworzone przez fanów remixy.",
   "station_menu_description_id_4": "Chiptune muzyk z gier i oryginały.",
-  "station_menu_description_id_5": "Cała playlista Rainwave.",
+  "station_menu_description_id_5": "Cała playlista Nerdwave.",
   "now_playing_on_...": "Teraz Odtwarzane Na %(station)",
 
   "__comment__": "Ustawienia",
@@ -348,10 +348,10 @@
   "cd_song_length": "2-6 dni",
   "cd_type_of_cooldown": "Rodzaj Oczekiwania",
   "cd_what_is": "Czym jest Oczekiwanie?",
-  "cd_why_use_cooldown": "Oczekiwania są używane, aby Rainwave nie powtarzało utworów i albumów.",
+  "cd_why_use_cooldown": "Oczekiwania są używane, aby Nerdwave nie powtarzało utworów i albumów.",
   "chrome_mobile_takes_time": "Android może zająć do 20 sekund.  Pomarańczowa ikona znaczy, że wszystko OK - proszę czekać!",
   "continued": "Kontynuowane",
-  "crash_happened": "Rainwave uległo awarii. :(",
+  "crash_happened": "Nerdwave uległo awarii. :(",
   "empty_list": "Pusta lista.",
   "font_options": "Opcje Czcionki",
   "github_repo": "GitHub",
@@ -383,7 +383,7 @@
   "page_title_on_google": "Radio Muzyka Z Gier",
   "playback_history_link": "Historia Odtwarzania",
   "playlist": "Lista Odtwarzania",
-  "please_refresh": "Odśwież stronę, by przywrócić Rainwave.",
+  "please_refresh": "Odśwież stronę, by przywrócić Nerdwave.",
   "prefs_f_norm": "Zmniejsz Czcionki Wraz Z Szerokością Ekranu",
   "prefs_hkm": "Układ Klawiatury Skrótów Klawiszowych",
   "prefs_l_displose": "Pokazuj Utwory, Które Przegrały W Głosowaniu",

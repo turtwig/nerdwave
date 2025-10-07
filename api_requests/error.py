@@ -20,7 +20,7 @@ class ErrorReport(APIHandler):
     tunein_required = False
     sid_required = False
     help_hidden = True
-    description = "Handles taking automated error reports from Rainwave."
+    description = "Handles taking automated error reports from Nerdwave."
     return_name = "error_report_result"
     fields = {
         "name": (fieldtypes.string, True),

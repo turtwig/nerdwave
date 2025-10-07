@@ -12,8 +12,8 @@ except ImportError:
 import tornado.web
 import tornado.httputil
 
-from rainwave.user import User
-from rainwave.playlist_objects.song import SongNonExistent
+from nerdwave.user import User
+from nerdwave.playlist_objects.song import SongNonExistent
 
 from api import fieldtypes
 from api import locale
@@ -25,7 +25,7 @@ from libs import cache
 
 from api.html import html_write_error
 
-# This is the Rainwave API main handling request class.  You'll inherit it in order to handle requests.
+# This is the Nerdwave API main handling request class.  You'll inherit it in order to handle requests.
 # Does a lot of form checking and validation of user/etc.  There's a request class that requires no authentication at the bottom of this module.
 
 # VERY IMPORTANT: YOU MUST DECORATE YOUR CLASSES.
@@ -62,7 +62,7 @@ class HTMLError404Handler(tornado.web.RequestHandler):
             self.render_string("basic_header.html", title="HTTP 404 - File Not Found")
         )
         self.write(
-            "<p><a href='https://rainwave.cc' target='_top'>Return to the front page.</a></p>"
+            "<p><a href='https://nerdwave.cc' target='_top'>Return to the front page.</a></p>"
         )
         self.write(self.render_string("basic_footer.html"))
         self.finish()
@@ -73,9 +73,9 @@ def get_browser_locale(handler, default="en_CA"):
 
     See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
     """
-    if "rw_lang" in handler.cookies:
-        if locale.RainwaveLocale.exists(handler.cookies["rw_lang"].value):
-            return locale.RainwaveLocale.get(handler.cookies["rw_lang"].value)
+    if "nw_lang" in handler.cookies:
+        if locale.NerdwaveLocale.exists(handler.cookies["nw_lang"].value):
+            return locale.NerdwaveLocale.get(handler.cookies["nw_lang"].value)
     if "Accept-Language" in handler.request.headers:
         languages = handler.request.headers["Accept-Language"].split(",")
         locales = []
@@ -92,11 +92,11 @@ def get_browser_locale(handler, default="en_CA"):
         if locales:
             locales.sort(key=lambda pair: pair[1], reverse=True)
             codes = [l[0] for l in locales]
-            return locale.RainwaveLocale.get_closest(codes)
-    return locale.RainwaveLocale.get(default)
+            return locale.NerdwaveLocale.get_closest(codes)
+    return locale.NerdwaveLocale.get(default)
 
 
-class RainwaveHandler(tornado.web.RequestHandler):
+class NerdwaveHandler(tornado.web.RequestHandler):
     # The following variables can be overridden by you.
     # Fields is a hash with { "form_name" => (fieldtypes.[something], True|False|None) } format, so that automatic form validation can be done for you.  True/False values are for required/optional.
     # A True requirement means it must be present and valid
@@ -105,7 +105,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
     fields = {}
     # This URL variable is setup by the server decorator - DON'T TOUCH IT.
     url = ""
-    # Do we need a Rainwave auth key for this request?
+    # Do we need a Nerdwave auth key for this request?
     auth_required = True
     # return_name is used for documentation, can be an array.
     # If not inherited, return_key automatically turns into url + "_result".  Useful for simple requests like rate, vote, etc.
@@ -155,7 +155,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
 
     def __init__(self, *args, **kwargs):
         if "websocket" not in kwargs:
-            super(RainwaveHandler, self).__init__(*args, **kwargs)
+            super(NerdwaveHandler, self).__init__(*args, **kwargs)
         self.cleaned_args = {}
         self.sid = None
         self._startclock = timestamp()
@@ -165,7 +165,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
         self.mobile = False
 
     def initialize(self, **kwargs):
-        super(RainwaveHandler, self).initialize(**kwargs)
+        super(NerdwaveHandler, self).initialize(**kwargs)
         if self.pagination:
             self.fields["per_page"] = (fieldtypes.zero_or_greater_integer, False)
             self.fields["page_start"] = (fieldtypes.zero_or_greater_integer, False)
@@ -173,7 +173,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
     def set_cookie(self, name, value, *args, **kwargs):
         if isinstance(value, int):
             value = repr(value)
-        super(RainwaveHandler, self).set_cookie(
+        super(NerdwaveHandler, self).set_cookie(
             name, value, *args, secure=True, samesite="lax", **kwargs
         )
 
@@ -346,7 +346,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
             self.set_header("Access-Control-Max-Age", "600")
             self.set_header("Access-Control-Allow-Credentials", "false")
 
-        if not isinstance(self.locale, locale.RainwaveLocale):
+        if not isinstance(self.locale, locale.NerdwaveLocale):
             self.locale = self.get_browser_locale()
 
         self.setup_output()
@@ -379,7 +379,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
             if not self.do_rw_session_auth():
                 self.do_phpbb_auth()
         else:
-            self.rainwave_auth()
+            self.nerdwave_auth()
 
         if not self.user and self.auth_required:
             raise APIException("auth_required", http_code=403)
@@ -463,15 +463,15 @@ class RainwaveHandler(tornado.web.RequestHandler):
     def _update_phpbb_session(self, session_id):
         db.c.update(
             "UPDATE phpbb_sessions SET session_last_visit = %s, session_page = %s WHERE session_id = %s",
-            (int(timestamp()), "rainwave", session_id),
+            (int(timestamp()), "nerdwave", session_id),
         )
 
     def do_rw_session_auth(self):
-        rw_session_id = self.get_cookie("r4_session_id")
-        if rw_session_id:
+        nw_session_id = self.get_cookie("r4_session_id")
+        if nw_session_id:
             user_id = db.c.fetch_var(
                 "SELECT user_id FROM r4_sessions WHERE session_id = %s",
-                (rw_session_id,),
+                (nw_session_id,),
             )
             if user_id:
                 self.user = User(user_id)
@@ -480,7 +480,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
                 return True
         return False
 
-    def rainwave_auth(self):
+    def nerdwave_auth(self):
         user_id_present = "user_id" in self.request.arguments
 
         if self.auth_required and not user_id_present:
@@ -554,7 +554,7 @@ class RainwaveHandler(tornado.web.RequestHandler):
         return limit
 
 
-class APIHandler(RainwaveHandler):
+class APIHandler(NerdwaveHandler):
     content_type = "application/json"
 
     is_api_handler = True
@@ -663,14 +663,14 @@ class APIHandler(RainwaveHandler):
             self.finish()
 
 
-class HTMLRequest(RainwaveHandler):
+class HTMLRequest(NerdwaveHandler):
     phpbb_auth = True
     allow_get = True
     write_error = html_write_error
     is_html = True
 
 
-# this mixin will overwrite anything in APIHandler and RainwaveHandler so be careful wielding it
+# this mixin will overwrite anything in APIHandler and NerdwaveHandler so be careful wielding it
 class PrettyPrintAPIMixin:
     phpbb_auth = True
     allow_get = True
@@ -682,7 +682,7 @@ class PrettyPrintAPIMixin:
     _output: dict[Any, Any] | list[Any]
     write: Callable
     render_string: Callable
-    locale: locale.RainwaveLocale
+    locale: locale.NerdwaveLocale
     return_name: str
     pagination: bool
     fields: dict

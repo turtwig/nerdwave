@@ -9,7 +9,7 @@ from api.urls import handle_url, handle_api_url
 from api_requests import info
 
 from libs import config
-from rainwave.user import User
+from nerdwave.user import User
 
 STATION_REGEX = "|".join(
     stream_filename for stream_filename in config.stream_filename_to_sid.keys()
@@ -37,7 +37,7 @@ class Blank(api.web.HTMLRequest):
 # @handle_url(STATION_URL_REGEX)
 # class MainIndex(api.web.HTMLRequest):
 #     sid: int = config.get("default_station")
-#     description = "Main Rainwave page."
+#     description = "Main Nerdwave page."
 #     auth_required = config.has("index_requires_login") and config.get(
 #         "index_requires_login"
 #     )
@@ -77,7 +77,7 @@ class Blank(api.web.HTMLRequest):
 #         if not cache.get_station(self.sid, "sched_current"):
 #             raise APIException(
 #                 "server_just_started",
-#                 "Rainwave is Rebooting, Please Try Again in a Few Minutes",
+#                 "Nerdwave is Rebooting, Please Try Again in a Few Minutes",
 #                 http_code=500,
 #             )
 
@@ -165,7 +165,7 @@ class Blank(api.web.HTMLRequest):
 @handle_api_url("bootstrap")
 class Bootstrap(api.web.APIHandler):
     description = (
-        "Bootstrap a Rainwave client.  Provides user info, API key, station info, relay info, and more.  "
+        "Bootstrap a Nerdwave client.  Provides user info, API key, station info, relay info, and more.  "
         "If you run a GET query to this URL, you will receive a Javascript file containing a single variable called BOOTSTRAP.  While this is largely intended for the purposes of the main site, you may use this.  "
         "If you run a POST query to this URL, you will receive a JSON object of the same data."
     )
@@ -206,7 +206,7 @@ class Bootstrap(api.web.APIHandler):
     def get(self):  # pylint: disable=method-hidden
         self.write("var BOOTSTRAP=")
         self.post()
-        self.write(";if(window.rainwaveInit){window.rainwaveInit()}")
+        self.write(";if(window.nerdwaveInit){window.nerdwaveInit()}")
 
     def post(self):
         info.attach_info_to_request(self, live_voting=True)

@@ -25,11 +25,11 @@ from api.web import APIHandler
 from api.web import get_browser_locale
 from api.urls import api_endpoints
 from api.urls import handle_api_url
-from rainwave.user import User
+from nerdwave.user import User
 import api.locale
 import api_requests.info
-import rainwave.playlist
-import rainwave.schedule
+import nerdwave.playlist
+import nerdwave.schedule
 
 from libs import cache
 from libs import log
@@ -109,7 +109,7 @@ class SessionBank:
             try:
                 session.keep_alive()
             except Exception as e:
-                session.rw_finish()
+                session.nw_finish()
                 log.exception("sync", "Session failed keepalive.", e)
 
     def update_all(self, sid):
@@ -121,7 +121,7 @@ class SessionBank:
                 session_count += 1
             except Exception as e:
                 try:
-                    session.rw_finish()
+                    session.nw_finish()
                 except:
                     pass
                 session_failed_count += 1
@@ -144,7 +144,7 @@ class SessionBank:
                     )
                 except Exception as e:
                     try:
-                        session.rw_finish()
+                        session.nw_finish()
                     except:
                         pass
                     log.exception(
@@ -182,7 +182,7 @@ class SessionBank:
         except Exception as e:
             log.exception("sync", "Session failed to be updated during update_user.", e)
             try:
-                session.rw_finish()
+                session.nw_finish()
             except Exception:
                 log.exception("sync", "Session failed finish() during update_user.", e)
 
@@ -280,8 +280,8 @@ def _on_zmq(messages):
                 delayed_live_vote[message["sid"]] = message
             elif message["action"] == "update_all":
                 delay_live_vote_removal(message["sid"])
-                rainwave.playlist.update_num_songs()
-                rainwave.playlist.prepare_cooldown_algorithm(message["sid"])
+                nerdwave.playlist.update_num_songs()
+                nerdwave.playlist.prepare_cooldown_algorithm(message["sid"])
                 cache.update_local_cache_for_sid(message["sid"])
                 sessions[message["sid"]].update_all(message["sid"])
                 votes_by = {}
@@ -410,7 +410,7 @@ class Sync(APIHandler):
             self.wait_future.cancel()
         super(Sync, self).finish(*args, **kwargs)
 
-    def rw_finish(self):
+    def nw_finish(self):
         self.finish()
 
     def refresh_user(self):
@@ -504,7 +504,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
     is_websocket = True
     local_only = False
     help_hidden = False
-    locale: api.locale.RainwaveLocale
+    locale: api.locale.NerdwaveLocale
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -560,7 +560,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
         self.throttled = False
         self.throttled_msgs = []
 
-    def rw_finish(self, *args, **kwargs):
+    def nw_finish(self, *args, **kwargs):
         self.close()
 
     def keep_alive(self):
@@ -713,7 +713,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
                         }
                     }
                 )
-            message["elec_id"] = rainwave.schedule.get_elec_id_for_entry(
+            message["elec_id"] = nerdwave.schedule.get_elec_id_for_entry(
                 self.sid, message["entry_id"]
             )
 
@@ -826,7 +826,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
                 and isinstance(endpoint._output[endpoint.return_name], dict)
                 and endpoint._output[endpoint.return_name]["success"]
             ):
-                live_voting = rainwave.schedule.update_live_voting(self.sid)
+                live_voting = nerdwave.schedule.update_live_voting(self.sid)
                 endpoint.append("live_voting", live_voting)
                 if self.should_vote_throttle():
                     zeromq.publish(

@@ -4,8 +4,8 @@
 
 import uuid
 from libs import db
-from rainwave.user import User
-from api.web import RainwaveHandler
+from nerdwave.user import User
+from api.web import NerdwaveHandler
 
 ALLOWED_DESTINATIONS = ("web", "rw", "app", "rwpath")
 
@@ -17,7 +17,7 @@ class R4SetupSessionMixin:
             destination = "web"
         return destination
 
-    def setup_rainwave_session_and_redirect(self, user_id, destination):
+    def setup_nerdwave_session_and_redirect(self, user_id, destination):
         session_id = str(uuid.uuid4())
         db.c.update(
             "INSERT INTO r4_sessions (session_id, user_id) VALUES (%s, %s)",
@@ -32,13 +32,13 @@ class R4SetupSessionMixin:
             user = User(user_id)
             user.authorize(1, None, bypass=True)
             self.redirect(
-                "rw://%s:%s@rainwave.cc" % (user.id, user.ensure_api_key()),
+                "rw://%s:%s@nerdwave.cc" % (user.id, user.ensure_api_key()),
             )
         elif destination == "rwpath":
             user = User(user_id)
             user.authorize(1, None, bypass=True)
             self.redirect(
-                "rwpath://rainwave.cc/%s/%s" % (user.id, user.ensure_api_key()),
+                "rwpath://nerdwave.cc/%s/%s" % (user.id, user.ensure_api_key()),
             )
         else:
             self.redirect("/")

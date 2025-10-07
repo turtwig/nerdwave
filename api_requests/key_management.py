@@ -47,7 +47,7 @@ class KeyIndex(api.web.HTMLRequest):
         for key in db.c.fetch_all(
             "SELECT * FROM r4_api_keys WHERE user_id = %s", (self.user.id,)
         ):
-            url = "rw://%s:%s@rainwave.cc" % (self.user.id, key["api_key"])
+            url = "rw://%s:%s@nerdwave.cc" % (self.user.id, key["api_key"])
             qr_url = qr_service % (url,)
             mini_qr_url = mini_qr_service % (url,)
             self.write("<tr><td>%s</td>" % key["api_key"])
@@ -90,7 +90,7 @@ class AppLogin(api.web.HTMLRequest):
             "applogin.html",
             request=self,
             locale=self.locale,
-            link_url="rw://%s:%s@rainwave.cc" % (self.user.id, key),
+            link_url="rw://%s:%s@nerdwave.cc" % (self.user.id, key),
         )
 
 

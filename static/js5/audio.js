@@ -1,12 +1,12 @@
 var RWAudioConstructor = function () {
   "use strict";
 
-  // this file uses RainwavePlayer which confirms to Javascript standards
+  // this file uses NerdwavePlayer which confirms to Javascript standards
   // unlike the rest of my codebase
   // furthermore it was all hacked in
   // so expect the worst in variable naming mixing
 
-  var self = RainwavePlayer;
+  var self = NerdwavePlayer;
   self.debug = true;
   self.shuffleURLs = true;
   if (!self.isSupported) return;
@@ -23,19 +23,19 @@ var RWAudioConstructor = function () {
   var iOSAppMode =
     window.webkit &&
     window.webkit.messageHandlers &&
-    window.webkit.messageHandlers.rainwavePlay;
+    window.webkit.messageHandlers.nerdwavePlay;
 
   if (iOSAppMode) {
     self.play = function () {
-      window.webkit.messageHandlers.rainwavePlay.postMessage(User.sid);
+      window.webkit.messageHandlers.nerdwavePlay.postMessage(User.sid);
     };
 
     self.stop = function () {
-      window.webkit.messageHandlers.rainwaveStop.postMessage(User.sid);
+      window.webkit.messageHandlers.nerdwaveStop.postMessage(User.sid);
     };
 
     self.useStreamURLs = function (streamURLs) {
-      window.webkit.messageHandlers.rainwaveUseStreamURLs.postMessage(
+      window.webkit.messageHandlers.nerdwaveUseStreamURLs.postMessage(
         streamURLs
       );
     };
@@ -238,7 +238,7 @@ var RWAudioConstructor = function () {
       var song = now_playing.songs[0];
       var art_exists = song.albums[0].art ? true : false;
       var art_url =
-        "https://rainwave.cc" +
+        "https://nerdwave.cc" +
         (now_playing.songs[0].albums[0].art || "static/images4/noart_1.jpg");
       var artwork = [
         {

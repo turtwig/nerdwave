@@ -1,8 +1,8 @@
 import api.web
 from api.urls import handle_api_url
 from api import fieldtypes
-from rainwave.playlist import Song
-from rainwave.playlist import SongGroup
+from nerdwave.playlist import Song
+from nerdwave.playlist import SongGroup
 
 
 @handle_api_url("admin/remove_group_from_song")

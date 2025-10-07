@@ -6,7 +6,7 @@ import sass
 from calmjs.parse import es5
 from calmjs.parse.unparsers.es5 import minify_print
 
-from libs import RWTemplates
+from libs import NWTemplates
 from libs.config import get_build_number
 from libs import config
 
@@ -119,7 +119,7 @@ def bake_js(source_dir="js5", dest_file="script5.js"):
     o = open(fn, "w")
     # Pylint disabled for next line because pylint is buggy about the es5 function
     o.write(minify_print(es5(js_content)))  # pylint: disable=not-callable
-    o.write("rainwaveInit();")
+    o.write("nerdwaveInit();")
     o.close()
 
 
@@ -137,7 +137,7 @@ def bake_templates(
         dest_file,
     )
     if not os.path.exists(dest_file) or always_write:
-        RWTemplates.compile_templates(
+        NWTemplates.compile_templates(
             source_dir,
             dest_file,
             helpers=False,
@@ -161,7 +161,7 @@ def build_new_static():
     with open(
         os.path.join(
             baked_dir,
-            "rainwave.js",
+            "nerdwave.js",
         ),
         "w",
     ) as output:
@@ -189,7 +189,7 @@ def build_new_static():
         ) as all_languages:
             output.write(all_languages.read())
 
-        output.write("rainwaveInit();")
+        output.write("nerdwaveInit();")
 
     shutil.copy(
         os.path.join(number_dir, "style5.css"), os.path.join(baked_dir, "style.css")

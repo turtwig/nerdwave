@@ -1,5 +1,5 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
 
    "language_name"                                   : "Русский",
    "language_name_short"                             : "RU",
@@ -50,7 +50,7 @@
    "no_results"                                      : "Нет результатов.",
    "empty_list"                                      : "Список пуст.",
    "no_search_results"                               : "Нет результата.",
-   "server_just_started"                             : "Rainwave.cc перезагружается",
+   "server_just_started"                             : "Nerdwave.cc перезагружается",
    "station_paused"                                  : "Трансляция станции приостановлена ДиДжем.",
    "album_on_other_station"                          : "Извините, альбом не доступен на этой станции!",
    "album_is_dj_only"                                : "Извините, альбом доступен только в этом событии!",
@@ -59,15 +59,15 @@
    "search_string_too_short"                         : "Поиск возможен от трех символов.",
    "search_result_limit"                             : "(слишком много результатов. пожалуйста поправьте ваш запрос.)",
    
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "Ой!",
    "something_went_wrong"                            : "Что-то пошло не так при загрузке с сервера. :(",
-   "crash_happened"                                  : "Rainwave упал. :(",
+   "crash_happened"                                  : "Nerdwave упал. :(",
    "report_sending"                                  : "Мы отсылаем отчет об этом на наш сервер.",
    "report_sent"                                     : "Нам сообщили об ошибке и мы ей обязательно займемся!",
    "report_error"                                    : "Мы даже не смогли отправить на наш сервер отчет об этом! :(",
-   "please_refresh"                                  : "Перегрузите страницу, чтобы вернуться на Rainwave.",
+   "please_refresh"                                  : "Перегрузите страницу, чтобы вернуться на Nerdwave.",
    "report_submitted"                                : "Отчет отправлен",
 
    "__comment__"                 : "API Key Management",
@@ -141,7 +141,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "Копилка",
-   "tip_jar_opener"                                  : "Rainwave будет продолжать работать независимо от денег в копилке.  Если вы хотите нам помочь материально:",
+   "tip_jar_opener"                                  : "Nerdwave будет продолжать работать независимо от денег в копилке.  Если вы хотите нам помочь материально:",
    "tip_jar_instruction_2"                           : "В комментарии укажите ваше имя пользователя и сообщение.",
    "tip_jar_instruction_3"                           : "Укажите если вы желаете остаться анонимным.",
    "tip_jar_opener_end"                              : "После того как мы обработаем заявку, мы выдадим вас статус Донора.  Это позволит вам добавлять больше треков в очередь заявок, а также голосовать более чем в одном голосовании одновременно.",
@@ -174,9 +174,9 @@
 
    "random_relay"                                    : "Случайный сервер",
    "redownload_m3u"                                  : "Вы пытаетесь подключиться?  Если вы только что вошли на сайт, скачайте заново плейлист.",
-   "sync_stopped"                                    : "Rainwave прекратил работу.  Обновите страницу и попробуйте снова.",
+   "sync_stopped"                                    : "Nerdwave прекратил работу.  Обновите страницу и попробуйте снова.",
    "lost_connection"                                 : "Потеряно соединение с сервером.",
-   "sync_retrying"                                   : "Проблемы с сервером Rainwave, пожалуйста подождите...",
+   "sync_retrying"                                   : "Проблемы с сервером Nerdwave, пожалуйста подождите...",
    "mobile_sync_retrying"                            : "Таймаут соединения, обновите страницу или попробуйте позже.",
    "async_error"                                     : "Ошибка обращения к серверу. Обновите страницу или попробуйте позж.",
    "deeplink_error"                                  : "Ошибка восприятия введенного URL адреса.",
@@ -275,7 +275,7 @@
    "station_menu_description_id_2"                   : "Все официальные треки от OverClocked ReMix.",
    "station_menu_description_id_3"                   : "Официальные и любительские ремиксы.",
    "station_menu_description_id_4"                   : "Чиптюн музыка из игр, а также оригинальные композиции.",
-   "station_menu_description_id_5"                   : "Весь плейлист Rainwave.",
+   "station_menu_description_id_5"                   : "Весь плейлист Nerdwave.",
    "now_playing_on_..."                              : "Сейчас играет на станции %(station)",
 
    "__comment__"                 : "Preferences",
@@ -333,7 +333,7 @@
    "timeformat_m"                                    : "м ",
    "timeformat_s"                                    : "с ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "Треки без оценки",
    "title"                                           : "Заголовок",
@@ -390,7 +390,7 @@
    "cd_song_length": "2-6 дней",
    "cd_type_of_cooldown": "Тип восстановления",
    "cd_what_is": "Что такое Восстановление?",
-   "cd_why_use_cooldown": "Восстановления используется для того, чтобы Rainwave не повторял песни и альбомы.",
+   "cd_why_use_cooldown": "Восстановления используется для того, чтобы Nerdwave не повторял песни и альбомы.",
    "cool_end": "Восстановление закончено",
    "discord_already_associated": "Другой аккаунт уже использует логин Discord'а.",
    "end": "Окончание",

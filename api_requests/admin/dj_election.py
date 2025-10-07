@@ -3,8 +3,8 @@ import api.web
 from api.urls import handle_api_url
 from api.exceptions import APIException
 from api import fieldtypes
-from rainwave import playlist
-from rainwave.events import election
+from nerdwave import playlist
+from nerdwave.events import election
 
 
 class GetCachedSongList(api.web.APIHandler):

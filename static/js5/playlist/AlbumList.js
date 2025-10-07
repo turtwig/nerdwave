@@ -173,7 +173,7 @@ var AlbumList = function (el) {
         : "");
     item._el._id = item.id;
 
-    // could do this using RWTemplates.fave but... speed.  want to inline here as much as possible.
+    // could do this using NWTemplates.fave but... speed.  want to inline here as much as possible.
     item._el_fave = document.createElement("div");
     item._el_fave.className = "fave";
     item._el.appendChild(item._el_fave);

@@ -350,7 +350,7 @@ var Requests = (function () {
   });
 
   INIT_TASKS.on_init.push(function (root_template) {
-    var $t = RWTemplates.requests();
+    var $t = NWTemplates.requests();
     self.on_init($t, root_template);
 
     header = $t.request_header;

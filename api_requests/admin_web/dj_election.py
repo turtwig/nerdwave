@@ -3,7 +3,7 @@ from api.web import HTMLRequest
 from api import fieldtypes
 from libs import config, cache, db
 from api_requests.admin_web.index import AlbumList, SongList
-from rainwave.events.election import Election
+from nerdwave.events.election import Election
 
 
 @handle_url("/admin/tools/dj_election")

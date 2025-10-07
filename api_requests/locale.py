@@ -9,7 +9,7 @@ from api import locale
 
 @handle_url("/locale/")
 class LocaleIndex(api.web.HTMLRequest):
-    description = "Lists the currently available Rainwave locales/translations and how many lines are missing in them, as compared to the English master locale."
+    description = "Lists the currently available Nerdwave locales/translations and how many lines are missing in them, as compared to the English master locale."
     auth_required = False
     sid_required = False
 
@@ -24,7 +24,7 @@ class LocaleIndex(api.web.HTMLRequest):
         self.write("</p><hr>")
 
         self.write(
-            "<p>Translating a new language?  Start with the <a href='https://github.com/rmcauley/rainwave/blob/master/lang/en_MASTER.json'>Github Translation File Template</a>.</p>"
+            "<p>Translating a new language?  Start with the <a href='https://github.com/rmcauley/nerdwave/blob/master/lang/en_MASTER.json'>Github Translation File Template</a>.</p>"
         )
 
         self.write(
@@ -56,7 +56,7 @@ class LocaleMissingLines(api.web.HTMLRequest):
             )
         )
         self.write(
-            "<p><a href='https://github.com/rmcauley/rainwave/blob/master/lang/%s.json'>GitHub JSON File</a></p>"
+            "<p><a href='https://github.com/rmcauley/nerdwave/blob/master/lang/%s.json'>GitHub JSON File</a></p>"
             % request_locale
         )
         self.write("<p>The following lines are missing from this translation:</p>")

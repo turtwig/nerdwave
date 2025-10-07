@@ -62,7 +62,7 @@
 		width: 200px;
 	}
 </style>
-<p>We highly encourage you use Rainwave as background music for your streams!  All our music is volume-normalized and ad-free, perfect for background as part of a stream!</p>
+<p>We highly encourage you use Nerdwave as background music for your streams!  All our music is volume-normalized and ad-free, perfect for background as part of a stream!</p>
 
 <h2>Content ID Concerns</h2>
 <p><b>The tl;dr is use OverClocked ReMix/OCR Radio</b>.  You are completely content ID safe when you do!</p>
@@ -85,19 +85,19 @@
 	<li>Add a Browser Source to your scene in OBS Studio.</li>
 	<li>Configure your widget below.  If you know CSS, you can tune the CSS directly to your liking using the Custom CSS tab.</li>
 	<li>Copy your widget's URL to the browser source and use the recommended source width/height displayed below.</li>
-	<li>Tune in to Rainwave using your browser or media player to play in the background.</li>
+	<li>Tune in to Nerdwave using your browser or media player to play in the background.</li>
 </ol>
 
 <!--
 	To update the form HTML, run this but add extra dashes.  It should be double dashes but HTML
 	comments don't allow those and we don't want to trigger quirks mode.
 
-	python libs/RWTemplates.py --templatedir templates/stream_js --outfile static/stream_templates.js --helpers
+	python libs/NWTemplates.py --templatedir templates/stream_js --outfile static/stream_templates.js --helpers
 -->
 <script src="/static/stream_templates.js"></script>
-<script src="/static/RWTemplates.js"></script>
-<script src="/static/RWTemplates.forms.js"></script>
-<script src="/static/RWTemplates.tabify.js"></script>
+<script src="/static/NWTemplates.js"></script>
+<script src="/static/NWTemplates.forms.js"></script>
+<script src="/static/NWTemplates.tabify.js"></script>
 <script src="/static/stream_utility.js"></script>
 <script src="/static/old-http-api.js"></script>
 <div id="template_zone" style="box-sizing: border-box; padding-right: 10px; float: left; width: 50%; border-right: solid 1px #CE8300; padding-bottom: 2em;"></div>
@@ -267,8 +267,8 @@
 		}
 	};
 
-	RWTemplates.stream_form(core_obj, document.getElementById("template_zone"));
-	RWTemplateHelpers.tabify(core_obj, "preset");
+	NWTemplates.stream_form(core_obj, document.getElementById("template_zone"));
+	NWTemplateHelpers.tabify(core_obj, "preset");
 
 	function preset(set) {
 		core_obj.presets.$t.update({ "preset_layout": set });
@@ -305,7 +305,7 @@
 		}
 		var qstring = API.serialize(obj);
 
-		var url = "https://rainwave.cc/widget/widget?" + qstring;
+		var url = "https://nerdwave.cc/widget/widget?" + qstring;
 		document.getElementById("widget_url").textContent = url;
 		document.getElementById("iframe").setAttribute("src", "/widget/widget?" + qstring);
 

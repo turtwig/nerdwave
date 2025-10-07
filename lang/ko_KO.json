@@ -1,5 +1,5 @@
 {
-   "__comment__"                 : "language_name appears in the pulldown box for language options on Rainwave.",
+   "__comment__"                 : "language_name appears in the pulldown box for language options on Nerdwave.",
 
    "language_name"                                   : "한국어",
    "language_name_short"                             : "한국어",
@@ -49,7 +49,7 @@
    "no_results"                                      : "결과가 없습니다.",
    "empty_list"                                      : "빈 목록입니다.",
    "no_search_results"                               : "해당되는 항목이 없습니다.",
-   "server_just_started"                             : "Rainwave 재가동중",
+   "server_just_started"                             : "Nerdwave 재가동중",
    "station_paused"                                  : "DJ가 스테이션을 멈추었습니다.",
    "album_on_other_station"                          : "여기에선 들을 수 없는 앨범입니다. 미안해요!",
    "album_is_dj_only"                                : "이벤트 한정 앨범입니다. 미안해요!",
@@ -58,11 +58,11 @@
    "search_string_too_short"                         : "3글자 이상의 검색어를 넣어주세요.",
    "search_result_limit"                             : "(결과가 너무 많습니다. 조금 더 구체적인 검색어를 넣어주세요.)",
 
-   "__comment__"                 : "Error pop-up when Rainwave goes crashes.",
+   "__comment__"                 : "Error pop-up when Nerdwave goes crashes.",
 
    "oops"                                            : "앗",
    "something_went_wrong"                            : "정보를 불러오던 중 문제가 생겼습니다. :(",
-   "crash_happened"                                  : "Rainwave가 작동을 멈추었습니다. :(",
+   "crash_happened"                                  : "Nerdwave가 작동을 멈추었습니다. :(",
    "report_sending"                                  : "서버로 리포트를 보내고 있습니다.",
    "report_sent"                                     : "문제에 대한 보고를 받았으며, 확인해보도록 하겠습니다!",
    "report_error"                                    : "에러 리포트 전송조차 실패했습니다! :(",
@@ -143,7 +143,7 @@
    "Patreon"                                         : "Patreon",
    "PayPal"                                          : "PayPal",
    "tip_jar"                                         : "기부",
-   "tip_jar_opener"                                  : "팁 통이 비어있어도 Rainwave 서비스는 계속됩니다.  혹시 약간의 길이나 메세타를 기부할 의향이 있으시다면,",
+   "tip_jar_opener"                                  : "팁 통이 비어있어도 Nerdwave 서비스는 계속됩니다.  혹시 약간의 길이나 메세타를 기부할 의향이 있으시다면,",
    "tip_jar_instruction_2"                           : "코멘트 란에 유저네임과 메세지를 써주세요.",
    "tip_jar_instruction_3"                           : "익명으로 기부하기 원하실 경우 알려주세요.",
    "tip_jar_opener_end"                              : "팁이 확인되면 기부자 자격을 부여해 드립니다. 기부자가 되면 더 많은 신청곡을 넣을 수 있고, 동시에 여러 곳에서 투표할 수 있습니다.",
@@ -176,7 +176,7 @@
 
    "random_relay"                                    : "랜덤 릴레이",
    "redownload_m3u"                                  : "청취중이신가요?  지금 막 로그인했고 외부 앱을 통해 들으신다면, MP3 나 Ogg M3U를 다시 받아주세요.",
-   "sync_stopped"                                    : "Rainwave가 작동을 멈췄습니다.  새로고침 후 다시 시도해 보세요.",
+   "sync_stopped"                                    : "Nerdwave가 작동을 멈췄습니다.  새로고침 후 다시 시도해 보세요.",
    "lost_connection"                                 : "접속이 끊어졌습니다.",
    "sync_retrying"                                   : "통신 상태가 좋지 않습니다.  기다려주세요...",
    "mobile_sync_retrying"                            : "접속에 문제가 있습니다.  새로고침해 보시거나 나중에 찾아주세요.",
@@ -278,7 +278,7 @@
    "station_menu_description_id_2"                   : "오버클럭 리믹스와 앨범.",
    "station_menu_description_id_3"                   : "오피셜 & 팬메이드 리믹스.",
    "station_menu_description_id_4"                   : "고전 게임 음악과 고전 게임 음악 풍의 음악.",
-   "station_menu_description_id_5"                   : "Rainwave에 있는 모든 게임 음악과 리믹스.",
+   "station_menu_description_id_5"                   : "Nerdwave에 있는 모든 게임 음악과 리믹스.",
    "now_playing_on_..."                              : "%(station)에서 현재 재생 중인 곡",
 
    "__comment__"                 : "Preferences",
@@ -336,7 +336,7 @@
    "timeformat_m"                                    : "분 ",
    "timeformat_s"                                    : "초 ",
 
-   "__comment__"                 : "Statistic Pages (see http://rainwave.cc/api4/ and scroll down)",
+   "__comment__"                 : "Statistic Pages (see http://nerdwave.cc/api4/ and scroll down)",
 
    "unrated_songs"                                   : "핑점없는 곡",
    "title"                                           : "제목",

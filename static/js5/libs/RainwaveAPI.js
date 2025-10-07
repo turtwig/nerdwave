@@ -1,4 +1,4 @@
-var RainwaveAPI = (function () {
+var NerdwaveAPI = (function () {
   "use strict";
 
   // Setup  ************************************************************************************************
@@ -220,7 +220,7 @@ var RainwaveAPI = (function () {
   var onSocketFailure = function (error) {
     if (error.tl_key === "auth_failed") {
       console.error(
-        "Authorization failed for Rainwave websocket.  Wrong API key/user ID combo."
+        "Authorization failed for Nerdwave websocket.  Wrong API key/user ID combo."
       );
       self.onError(error);
       self.closePermanently();
@@ -310,7 +310,7 @@ var RainwaveAPI = (function () {
     try {
       json = JSON.parse(message.data);
     } catch (exc) {
-      console.error("Response from Rainwave API was not JSON!");
+      console.error("Response from Nerdwave API was not JSON!");
       console.error(message);
       closeSocket();
       if (asyncRequest) {
@@ -320,7 +320,7 @@ var RainwaveAPI = (function () {
     }
 
     if (!json) {
-      console.error("Response from Rainwave API was blank!");
+      console.error("Response from Nerdwave API was blank!");
       console.error(message);
       closeSocket();
       if (asyncRequest) {
@@ -385,7 +385,7 @@ var RainwaveAPI = (function () {
 
   self.request = function (action, params, onSuccess, onError) {
     if (!action) {
-      throw "No action specified for Rainwave API request.";
+      throw "No action specified for Nerdwave API request.";
     }
     params = params || {};
     params.action = action;

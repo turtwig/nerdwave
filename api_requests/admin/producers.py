@@ -6,8 +6,8 @@ import api.web
 from api.urls import handle_api_url
 from api.exceptions import APIException
 from api import fieldtypes
-from rainwave.events import event
-from rainwave.events.event import BaseProducer
+from nerdwave.events import event
+from nerdwave.events.event import BaseProducer
 
 
 @handle_api_url("admin/list_producers")

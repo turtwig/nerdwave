@@ -37,7 +37,7 @@ class DiscordAuth(HTMLRequest, OAuth2Mixin, R4SetupSessionMixin):
             oauth_secret = self.get_cookie("r4_oauth_secret")
             if not oauth_secret:
                 raise OAuthRejectedError(
-                    "OAuth 1st party cookie not found - have you disabled cookies for Rainwave?  1st party cookies are required for Discord login to work on Rainwave."
+                    "OAuth 1st party cookie not found - have you disabled cookies for Nerdwave?  1st party cookies are required for Discord login to work on Nerdwave."
                 )
             oauth_expected_state = bcrypt.hashpw(
                 oauth_secret.encode(), OAUTH_STATE_SALT
@@ -48,7 +48,7 @@ class DiscordAuth(HTMLRequest, OAuth2Mixin, R4SetupSessionMixin):
                 state_argument = state_argument.decode()
             if not isinstance(state_argument, str):
                 raise OAuthRejectedError(
-                    "State argument was not passed back to Rainwave from Discord."
+                    "State argument was not passed back to Nerdwave from Discord."
                 )
             destination, oauth_state = state_argument.split("$", maxsplit=1)
             if oauth_expected_state != oauth_state:
@@ -60,10 +60,10 @@ class DiscordAuth(HTMLRequest, OAuth2Mixin, R4SetupSessionMixin):
                 token_argument = token_argument.decode()
             if not isinstance(token_argument, str):
                 raise OAuthRejectedError(
-                    "Token argument was not passed back to Rainwave from Discord."
+                    "Token argument was not passed back to Nerdwave from Discord."
                 )
             token = await self.get_token(token_argument)
-            # step 4 - get user info from Discord and login to Rainwave
+            # step 4 - get user info from Discord and login to Nerdwave
             await self.register_and_login(token, destination)
         else:
             # step 1 - redirect to Discord login page
@@ -225,4 +225,4 @@ class DiscordAuth(HTMLRequest, OAuth2Mixin, R4SetupSessionMixin):
                 "discord", f"Created new user {user_id} from Discord {discord_user_id}"
             )
 
-        self.setup_rainwave_session_and_redirect(user_id, destination)
+        self.setup_nerdwave_session_and_redirect(user_id, destination)

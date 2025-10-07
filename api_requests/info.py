@@ -6,7 +6,7 @@ from api.urls import handle_api_url
 import api_requests.vote
 import api_requests.playlist
 import api_requests.tune_in
-from rainwave.events.event import BaseEvent
+from nerdwave.events.event import BaseEvent
 
 from libs import cache
 from libs import config
@@ -95,7 +95,7 @@ def attach_info_to_request(
         if not sched_current:
             raise APIException(
                 "server_just_started",
-                "Rainwave is Rebooting, Please Try Again in a Few Minutes",
+                "Nerdwave is Rebooting, Please Try Again in a Few Minutes",
                 http_code=500,
             )
         if request.user.is_tunedin():
@@ -131,7 +131,7 @@ def attach_info_to_request(
         if not sched_current:
             raise APIException(
                 "server_just_started",
-                "Rainwave is Rebooting, Please Try Again in a Few Minutes",
+                "Nerdwave is Rebooting, Please Try Again in a Few Minutes",
                 http_code=500,
             )
         sched_next = cast(list[dict], cache.get_station(request.sid, "sched_next_dict"))

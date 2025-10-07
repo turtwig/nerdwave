@@ -4,8 +4,8 @@ from api import fieldtypes
 from api.urls import handle_api_html_url, handle_api_url
 from api.web import APIHandler, PrettyPrintAPIMixin, APIException
 from libs import cache, db
-from rainwave import playlist
-from rainwave import user as UserLib
+from nerdwave import playlist
+from nerdwave import user as UserLib
 
 
 @handle_api_url("listener")
